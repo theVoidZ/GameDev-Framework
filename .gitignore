@@ -2,10 +2,6 @@
 build/
 doc/diagram/
 
-# Qt project file
-*.pro
-*.pro.user
-
 # Compiled Object files
 *.slo
 *.lo
