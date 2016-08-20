@@ -1,0 +1,17 @@
+<map id="/doc/projects/cpp/GameDevFramework_v5/include/Core/Graphic/Animation/animation.h" name="/doc/projects/cpp/GameDevFramework_v5/include/Core/Graphic/Animation/animation.h">
+<area shape="rect" id="node3" href="$behavior_8h.html" title="Core/System/behavior.h" alt="" coords="1016,117,1179,143"/>
+<area shape="rect" id="node33" href="$_graphic_2_animation_2wrapmode_8h.html" title="Core/Graphic/Animation\l/wrapmode.h" alt="" coords="1203,109,1365,151"/>
+<area shape="rect" id="node34" href="$bounds_8h.html" title="Core/DataStruct/bounds.h" alt="" coords="2110,273,2285,300"/>
+<area shape="rect" id="node4" href="$component_8h.html" title="kernel/component.h" alt="" coords="1029,199,1165,225"/>
+<area shape="rect" id="node6" href="$gameobject_8h.html" title="kernel/gameobject.h" alt="" coords="1028,273,1167,300"/>
+<area shape="rect" id="node15" href="$object_8h.html" title="kernel/object.h" alt="" coords="1044,348,1151,375"/>
+<area shape="rect" id="node25" href="$hierarchicalcontainer_8h.html" title="hierarchicalcontainer.h" alt="" coords="459,497,611,524"/>
+<area shape="rect" id="node29" href="$gotag_8h.html" title="Core/gotag.h" alt="" coords="574,348,671,375"/>
+<area shape="rect" id="node30" href="$golayer_8h.html" title="Core/golayer.h" alt="" coords="696,348,803,375"/>
+<area shape="rect" id="node18" href="$gameinfo_8h.html" title="kernel/gameinfo.h" alt="" coords="1035,423,1160,449"/>
+<area shape="rect" id="node28" href="$scene_8h.html" title="kernel/scene.h" alt="" coords="595,423,701,449"/>
+<area shape="rect" id="node23" href="$kernelrules_8h.html" title="kernel/kernelrules.h" alt="" coords="1430,497,1565,524"/>
+<area shape="rect" id="node24" href="$terminal__colors_8h.html" title="Core/Utilities/terminal\l_colors.h" alt="" coords="707,572,855,613"/>
+<area shape="rect" id="node36" href="$algorithm_8h.html" title="Core/Utilities/algorithm.h" alt="" coords="2235,423,2402,449"/>
+<area shape="rect" id="node38" href="$ray_8h.html" title="Core/DataStruct/ray.h" alt="" coords="2365,348,2515,375"/>
+</map>

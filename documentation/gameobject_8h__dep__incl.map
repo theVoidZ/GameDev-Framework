@@ -1,0 +1,22 @@
+<map id="/doc/projects/cpp/GameDevFramework_v5/include/kernel/gameobject.h" name="/doc/projects/cpp/GameDevFramework_v5/include/kernel/gameobject.h">
+<area shape="rect" id="node2" href="$component_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/kernel\l/component.h" alt="" coords="977,109,1169,165"/>
+<area shape="rect" id="node3" href="$renderer_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/Graphic/renderer.h" alt="" coords="231,213,416,269"/>
+<area shape="rect" id="node5" href="$behavior_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/System/behavior.h" alt="" coords="557,213,743,269"/>
+<area shape="rect" id="node17" href="$transform_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/System/transform.h" alt="" coords="767,213,952,269"/>
+<area shape="rect" id="node18" href="$garbagecollector_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/kernel\l/garbagecollector.h" alt="" coords="977,213,1169,269"/>
+<area shape="rect" id="node19" href="$resourcemanager_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/resource\l_management/resourcemanager.h" alt="" coords="1193,213,1411,269"/>
+<area shape="rect" id="node20" href="$chrono_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/time\l_management/chrono.h" alt="" coords="1436,213,1621,269"/>
+<area shape="rect" id="node21" href="$timewinder_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/time\l_management/timewinder.h" alt="" coords="1645,213,1831,269"/>
+<area shape="rect" id="node4" href="$spriterenderer_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/Graphic/spriterenderer.h" alt="" coords="5,317,191,373"/>
+<area shape="rect" id="node6" href="$animation_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/Graphic/Animation/animation.h" alt="" coords="215,317,419,373"/>
+<area shape="rect" id="node7" href="$animator_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/Graphic/Animation/animator.h" alt="" coords="443,317,641,373"/>
+<area shape="rect" id="node8" href="$camera_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/System/camera.h" alt="" coords="665,317,851,373"/>
+<area shape="rect" id="node9" href="$monobehavior_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Core\l/System/monobehavior.h" alt="" coords="875,317,1060,373"/>
+<area shape="rect" id="node16" href="$timekeeper_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/time\l_management/timekeeper.h" alt="" coords="1084,317,1269,373"/>
+<area shape="rect" id="node10" href="$arduinotest_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Assets\l/TestCases/arduinotest.h" alt="" coords="528,421,727,477"/>
+<area shape="rect" id="node11" href="$moveobject_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Assets\l/TestCases/moveobject.h" alt="" coords="751,421,949,477"/>
+<area shape="rect" id="node12" href="$simulatorcomponent_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Assets\l/TestCases/simulatorcomponent.h" alt="" coords="973,421,1196,477"/>
+<area shape="rect" id="node13" href="$velocitydef_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/Assets\l/TestCases/velocitydef.h" alt="" coords="1220,421,1419,477"/>
+<area shape="rect" id="node14" href="$eventtranslation_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/time\l_management/eventtranslation.h" alt="" coords="1099,525,1310,581"/>
+<area shape="rect" id="node15" href="$eventvelocity_8h.html" title="/doc/projects/cpp/GameDev\lFramework_v5/include/time\l_management/eventvelocity.h" alt="" coords="1335,525,1531,581"/>
+</map>

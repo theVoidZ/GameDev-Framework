@@ -1,0 +1,15 @@
+<map id="/doc/projects/cpp/GameDevFramework_v5/include/Core/Graphic/renderer.h" name="/doc/projects/cpp/GameDevFramework_v5/include/Core/Graphic/renderer.h">
+<area shape="rect" id="node4" href="$component_8h.html" title="kernel/component.h" alt="" coords="828,109,964,136"/>
+<area shape="rect" id="node32" href="$bounds_8h.html" title="Core/DataStruct/bounds.h" alt="" coords="2278,184,2453,211"/>
+<area shape="rect" id="node6" href="$gameobject_8h.html" title="kernel/gameobject.h" alt="" coords="752,184,891,211"/>
+<area shape="rect" id="node13" href="$object_8h.html" title="kernel/object.h" alt="" coords="1122,259,1228,285"/>
+<area shape="rect" id="node24" href="$hierarchicalcontainer_8h.html" title="hierarchicalcontainer.h" alt="" coords="658,408,810,435"/>
+<area shape="rect" id="node28" href="$gotag_8h.html" title="Core/gotag.h" alt="" coords="392,259,489,285"/>
+<area shape="rect" id="node29" href="$golayer_8h.html" title="Core/golayer.h" alt="" coords="514,259,620,285"/>
+<area shape="rect" id="node16" href="$gameinfo_8h.html" title="kernel/gameinfo.h" alt="" coords="1247,333,1372,360"/>
+<area shape="rect" id="node27" href="$scene_8h.html" title="kernel/scene.h" alt="" coords="598,333,704,360"/>
+<area shape="rect" id="node22" href="$kernelrules_8h.html" title="kernel/kernelrules.h" alt="" coords="1730,408,1865,435"/>
+<area shape="rect" id="node23" href="$terminal__colors_8h.html" title="Core/Utilities/terminal\l_colors.h" alt="" coords="544,483,692,524"/>
+<area shape="rect" id="node34" href="$algorithm_8h.html" title="Core/Utilities/algorithm.h" alt="" coords="2282,333,2449,360"/>
+<area shape="rect" id="node36" href="$ray_8h.html" title="Core/DataStruct/ray.h" alt="" coords="2412,259,2562,285"/>
+</map>

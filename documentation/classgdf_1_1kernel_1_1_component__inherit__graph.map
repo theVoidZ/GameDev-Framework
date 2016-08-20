@@ -1,0 +1,20 @@
+<map id="gdf::kernel::Component" name="gdf::kernel::Component">
+<area shape="rect" id="node4" href="$class_behavior.html" title="Behavior" alt="" coords="567,107,641,133"/>
+<area shape="rect" id="node14" href="$class_chrono.html" title="Chrono" alt="" coords="572,157,636,184"/>
+<area shape="rect" id="node15" href="$classgdf_1_1kernel_1_1_garbage_collector.html" title="gdf::kernel::GarbageCollector" alt="" coords="508,208,700,235"/>
+<area shape="rect" id="node16" href="$class_renderer.html" title="Renderer" alt="" coords="567,259,641,285"/>
+<area shape="rect" id="node18" href="$class_resource_manager.html" title="The resource manager holds a set of active instances that can be used on demand without loading again..." alt="" coords="540,309,668,336"/>
+<area shape="rect" id="node19" href="$class_time_winder.html" title="TimeWinder" alt="" coords="558,360,650,387"/>
+<area shape="rect" id="node20" href="$class_transform.html" title="Transform is a component that defines a position, a rotation and a scale for a game object in 2d&#45;coor..." alt="" coords="563,411,645,437"/>
+<area shape="rect" id="node2" href="$classgdf_1_1kernel_1_1_object.html" title="Base class for most objects of the Framework. " alt="" coords="124,259,253,285"/>
+<area shape="rect" id="node5" href="$class_animation.html" title="Animation" alt="" coords="763,5,843,32"/>
+<area shape="rect" id="node6" href="$class_animator.html" title="Animator" alt="" coords="765,56,840,83"/>
+<area shape="rect" id="node7" href="$class_camera.html" title="Camera" alt="" coords="769,107,837,133"/>
+<area shape="rect" id="node8" href="$class_mono_behavior.html" title="MonoBehavior" alt="" coords="750,157,855,184"/>
+<area shape="rect" id="node13" href="$class_time_keeper.html" title="TimeKeeper" alt="" coords="757,208,849,235"/>
+<area shape="rect" id="node9" href="$class_arduino_test.html" title="NOTE: Arduino Behavior, Is abstract because it MUST contain its own logic. " alt="" coords="931,81,1023,108"/>
+<area shape="rect" id="node10" href="$class_move_object.html" title="MoveObject" alt="" coords="931,132,1023,159"/>
+<area shape="rect" id="node11" href="$class_simulator_component.html" title="SimulatorComponent" alt="" coords="905,183,1049,209"/>
+<area shape="rect" id="node12" href="$class_velocity_def.html" title="VelocityDef" alt="" coords="932,233,1023,260"/>
+<area shape="rect" id="node17" href="$class_sprite_renderer.html" title="NEW: Adapt this to the Resource. " alt="" coords="748,259,857,285"/>
+</map>

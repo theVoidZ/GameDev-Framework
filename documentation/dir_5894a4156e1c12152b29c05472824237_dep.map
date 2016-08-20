@@ -1,0 +1,21 @@
+<map id="/doc/projects/cpp/GameDevFramework_v5/include/Core" name="/doc/projects/cpp/GameDevFramework_v5/include/Core">
+<area shape="rect" id="node2" href="dir_9de4f13e2d72331aea76949fcebf7cd8.html" title="DataStruct" alt="" coords="191,255,276,303"/>
+<area shape="rect" id="node6" href="dir_1a330897a6084fe2946fef24b7651adb.html" title="Utilities" alt="" coords="217,351,289,399"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000008_000014.html" title="2" alt="" coords="249,324,257,338"/>
+<area shape="rect" id="node3" href="dir_04ad2f5c5cc9b2600279451bfeaf3246.html" title="Exception" alt="" coords="133,63,213,111"/>
+<area shape="rect" id="node4" href="dir_c2666d5a919be7424cb44fa41d54f3e8.html" title="Graphic" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000009_000008.html" title="4" alt="" coords="205,228,213,242"/>
+<area shape="rect" id="node5" href="dir_28d03b7e03a2601e3d510115ca4928de.html" title="System" alt="" coords="197,159,269,207"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000009_000013.html" title="2" alt="" coords="182,136,190,151"/>
+<area shape="rect" id="node7" href="dir_36374c162d1de7e2c8d6e40e623ee9d8.html" title="resource_management" alt="" coords="341,159,496,207"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000009_000016.html" title="1" alt="" coords="322,143,330,157"/>
+<area shape="rect" id="node8" href="dir_1dbc1a6cd6b7864dff50b7538fd3e9a1.html" title="kernel" alt="" coords="383,255,455,303"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000009_000015.html" title="6" alt="" coords="471,249,479,264"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000013_000008.html" title="1" alt="" coords="238,229,246,244"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000013_000015.html" title="2" alt="" coords="366,236,374,251"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000016_000015.html" title="3" alt="" coords="423,229,431,244"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000015_000007.html" title="5" alt="" coords="323,95,331,110"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000015_000014.html" title="3" alt="" coords="305,344,313,359"/>
+<area shape="rect" id="clust2" href="dir_5894a4156e1c12152b29c05472824237.html" alt="" coords="27,52,320,409"/>
+<area shape="rect" id="clust1" href="dir_947bf674dd1b9970a37b03ff502c6b23.html" title="include" alt="" coords="16,16,331,420"/>
+</map>

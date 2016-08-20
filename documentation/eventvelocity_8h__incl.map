@@ -1,0 +1,16 @@
+<map id="/doc/projects/cpp/GameDevFramework_v5/include/time_management/eventvelocity.h" name="/doc/projects/cpp/GameDevFramework_v5/include/time_management/eventvelocity.h">
+<area shape="rect" id="node5" href="$event_8h.html" title="time_management/event.h" alt="" coords="397,109,573,136"/>
+<area shape="rect" id="node6" href="$velocitydef_8h.html" title="Assets/TestCases/velocitydef.h" alt="" coords="163,109,373,136"/>
+<area shape="rect" id="node7" href="$monobehavior_8h.html" title="Core/System/monobehavior.h" alt="" coords="299,184,493,211"/>
+<area shape="rect" id="node8" href="$behavior_8h.html" title="Core/System/behavior.h" alt="" coords="844,259,1007,285"/>
+<area shape="rect" id="node9" href="$component_8h.html" title="kernel/component.h" alt="" coords="1427,333,1563,360"/>
+<area shape="rect" id="node11" href="$gameobject_8h.html" title="kernel/gameobject.h" alt="" coords="1351,408,1489,435"/>
+<area shape="rect" id="node20" href="$object_8h.html" title="kernel/object.h" alt="" coords="1433,483,1540,509"/>
+<area shape="rect" id="node29" href="$hierarchicalcontainer_8h.html" title="hierarchicalcontainer.h" alt="" coords="1849,632,2001,659"/>
+<area shape="rect" id="node33" href="$gotag_8h.html" title="Core/gotag.h" alt="" coords="1042,483,1139,509"/>
+<area shape="rect" id="node34" href="$golayer_8h.html" title="Core/golayer.h" alt="" coords="1164,483,1271,509"/>
+<area shape="rect" id="node23" href="$gameinfo_8h.html" title="kernel/gameinfo.h" alt="" coords="1200,557,1325,584"/>
+<area shape="rect" id="node32" href="$scene_8h.html" title="kernel/scene.h" alt="" coords="1943,557,2049,584"/>
+<area shape="rect" id="node27" href="$kernelrules_8h.html" title="kernel/kernelrules.h" alt="" coords="1247,632,1382,659"/>
+<area shape="rect" id="node28" href="$terminal__colors_8h.html" title="Core/Utilities/terminal\l_colors.h" alt="" coords="1978,707,2126,748"/>
+</map>
