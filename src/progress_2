@@ -1,0 +1,219 @@
+#   Recheck AbstractGameInfo
+#   Recheck GameInfo
+#   Recheck Scene
+#   GameInfo supports Multi-scenes
+#   Daemon property for scenes
+    -update non-active scene
+#   Obj.instance_id is refers to the address of the object
+    -is unique relative to the current time
+?   Specialization of addComponent by "Camera"
+#   Checking 'can_be_attached' is devoted to the GameObject
+    -Make a listing of the requirement for a given "Component"
+    -Make a x2 map<string, list<string> > of dependencies, dependants.
+    -Implements it in the Kernel of the framework
+#   Move isSingleton property to Manager entity
+#   Enhance is_singleton by a numeric checking ( may allow several instances and not only one ) of a component
+#   Make a templated version of can_attach / can_detach
+    -Abort
+#   Make a Kernel for the framework
+#   can_attach/can_detach implemented staticaly
+    -Needs to be implemented and be modifyied dynamicaly
+    -Using MACROS
+#   Transform revised
+#   Do not manage shadows on Renderer ( yet )
+#   Manipulate Cameras (views) EASILY.
+#   Transform is disfunctionning
+    -Transform is back
+#   Camera: take in consideration the zoom during translations ?
+#   GameLoop remastered: update, fixed_update, late_update. Take in consideration "enable" property when willing to update
+#   Make Ray inherits from sf::Transform/sf::Transformable
+#   Build a MATHEMATICAL KIT ( including geometry )
+#   Issues while zooming in CAMERA
+##  Remake a custom base of Drawable & Transform
+#   Rotate Camera will produce disfunctionning over Bounds
+#   'lifetime'/creation_time for GameObject and Component
+#   Be able to retreive gameInfo duration.
+#   CommandManager ( packtPub ) vs sendMessages ( Unity ) ?
+#   Garbage Collector (GC):
+    -Daemon scenes can invoke GC
+    -GC destroy the object by invoking its destructor
+    -GC can time-schedule a destruction or perform it intantaneously
+    -GC can cancel a destruction
+    -Destroying the same object twice will have no effect.
+#   GameDuration: for GameInfo & Scenes
+#   Each SCENE accounts the time passed by summing the DTs passed from the GameInfo.
+    -Each Scene has its own perspective of time
+#   Create a RootGameObject, implies GameObject to be non-final, Thus, restrict access to methods by making them finals
+#   Marks the Root with a special MARK
+    -GameObject::scene != nullptr ==> root
+#   Arduino_Integration first try: SUCCESS
+    -Making a LED blink when a GameObject changes its visibility.
+#   A GameObject must have on parent and must be a child of on gameObject
+#   Set independance between attach/detach methods ? Parent side, Child side: Child side bases on Parent side
+#   Organize dependant component in hierarchy
+#   Recreate an OO version of the kernel
+#   Requirement & Dependencies system is remade & working.
+#   Create a second container 'components' for components that are directly attached to the gameobject
+#   Hierarchy component creation created. ( + linking )
+#   Proceed to adequatly destroy them
+#   Managing a resource multiple times. ?
+#   First model of time-rewind implemented using TimeKeeper and TimeWinder
+#   Introduce SceneComponent ( same as ordinary components )
+#   USE 'var_' notation for member variable
+#   introduce a global namespace 'gdf'
+#   Place SFML events within the SCENE.
+#   Writing the INIT mechanism, from GameInfo > Scene > GameObject > Component ( consider GameInfo & Scene 's components )
+#   Establish component restriction
+    Can be set using rules. ex: Scene cannot add a component of type X. etc
+    ex: GameObject cannot add a TimeWinder component.
+
+//------------------------------------------------------------------------------------
+[Pending]:  Fully document the code using doxygen notation
+[Pending]:  Rechecking classes
+    [#] AbstractGameInfo
+
+[Pending]:  Allow multi-scene management on a GameInfo
+[Pending]:  Init variable during their declaration.
+[Pending]:  Making a class responsible for rendering at the Screen
+[Pending]:  Simplifying the creation of the scene and its elements
+
+[Pending]:  Set the includes within the c cpp files
+[Pending]:  Set whether update an inactive scene or not. Loaded or not, ( State Like )
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+//OLD                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////
+
+#Progress:      ( #Tasks that just need to be done )
+[Done]:         Build the Game-Logic ( GameInfo class)
+[Done]          Make GameInfo 'abstract' class
+[Done]:         Build the base class for Scenes ( Scene class )
+[Done]:         Making the GuiRender module, that uses 'onGui' to render onto the screen.
+[Done]:         Create a Camera class to represent a single View. Allow multiple views to be handled.
+[Done]:         Create adaptative viewPort to keep correct resolutions ( aspect ratio ), and real dimension of the items.
+[Done]:         Make the camera as a 'Component' ( Behaviour )
+[Done]:         Creating the base-class 'GameObject', 'Component' that inherit from 'Object'.
+[Done]:         Make GameObject and Scene friend, to allow instantiation even with a private constructor.
+[Done]:         Create prototypes of 'addComponent' and 'getComponent'
+[Done]:         Write definitions of 'addComponent' and 'getComponent'
+[Done]:         Define a set of cameras proper to each 'Scene'.
+[Done]:         Set a way to register created camera using only 'addComponent'.
+[Done]:         Create the multiple getComponent methods, parametrized with:
+                quantity, search location, type or sub-types.
+[Half/Done]:    Continue 'children' getComponent methods, implementing it recursively.
+[Done]:         Duplicate some methods of GameObject into Component. (some) GameObject's methods can be invoked from any 'Component'.
+[Done]:         Coordinates system and transforming:
+                Screen, World, Viewport
+[Pending]:      Control methods invoking according to the game object's state ( Disabled / Enabled ).
+                When a game object is disabled, every component will no longer updates, renders, handles collision nor events
+                But, can they receive callback functions ?
+                =No.
+[Pending]:      Multiple variables for STATE.
+                active_in_hierarchy: Set to true when the game object is active and all its ancestors are also active.
+                active_self: Set to true when the game object is active, regardless to its ancestors.
+                enabled: Set to true when a behaviour is active.
+[Done]:         Complete definition of some methods in 'Transform'.
+[Done]:         Setup the coordination between parent and child' coordinates.
+[Pending]:      Setup two versions of coordinates manipulation, as flat values (x, y) and as a vector sf::Vector2f(). In such methods, translate, scale ...
+                I may create my own structure ?
+[Pending]:      Establish naming procedure & rules.
+                =Is it unique? use auto-naming ? path system ?
+[Pending]:      Create method to check wether a component is a singleton or not, can be attached/detached or not.
+[Pending]:      Implements a 'toString' method for each object like in java.
+[Pending]:      Implements operations for defined DataStructure as {+, -, *, /, ++, --, ==, ! ... }
+[Pending]:      MultipleSprite BUG !
+[Done]:         Animating the animator using statemachine ( Mecanim system ), and Legacy animation.
+[Pending]:      C++11 allows initializing members in header ( within declaration )
+[Pending]:      Defaulted and Deleted functions in C++11
+--------------------------------------------------------------------------------
+#Notes:         ( #Tasks that need solution first or long term suggestions )
+[Canceled]:     Do not use a QTimer to invoke 'repaint'
+                =use sf::Clock instead.
+                =There is no looping function to inject the code.
+[Done]:         Allows one instance of GameInfo.
+                =Make a static singleton.
+[Pending]:      Make the GameInfo able to manage multi-scene.
+[Done]:         Create folder hierarchy to organize classes.
+                =   -Engine         : holds all the classes that participate for the creation of the engine's application
+                    -Core           : holds all the classes needed to create an instance of the user-application. 'The developpment kit'
+                        -Graphic
+                        -Audio
+                        -System
+                        -Network
+                        -Window
+                    -Assets         : holds all the user-classes & resources that represent a concrete instance of the user-application
+[Done]:         Prevent cyclic links in the transform hierarchy. It has to be a tree-structure
+[Pending]:      Review documentation.
+[Pending]:      Uses HTML on writing documentation.
+[Pending]:      Add 'is_loaded' and 'life_time' attributs inside 'GameObject' and 'Component'.
+[Pending]:      Declare a 'game object counter' for an ordered naming system.
+[Pending]:      Add keyword specifier ( final, overriden, abstract, explicit, implicit, const ... )
+[Pending]:      Set includes macro in .cpp files to avoide circular inclusion.
+[Pending]:      Use 'Q_OBJECT' MACRO on every component or a sub-class of it.
+[Pending]:      Create 'getters' and 'setters'
+[Pending]:      Use 'Q_INVOKABLE' to invoke method dynamically .
+[Pending]:      Use a 'Callback functions' mecanism to invoke in MonoBehaviours.
+                Implemented methods:
+                =onPreRender, onPostRender, onGui,
+[Pending]:      Adds 'const' modifier to Getter's methods.
+[Pending]:      Initialize members with default value.
+[Pending]:      View the sorting layer mecanism, affectations and rendering order.
+[Pending]:      Get the viewlocation of a camera.
+                =using transform ?!
+[Pending]:      How many AnimationClip inside Animation, one or many
+                =Concerne one type of clip ?, for weight-based, Animation Blending, Additive animations, Animation Mixing
+[Pending]:      'mirror/parameter/active' in AnimatorState is not implemented yet.
+[Pending]:      Deallocation from containers
+[Pending]:      Use struct facilities. In C++11/14
+[Done]:         Separate between AnimatorCondition structure and it's evaluation mecanism
+                =Using static methods in Algorithm class
+
+--------------------------------------------------------------------------------
+#Ideas:         ( Long term tasks > RAW Ideas )
+> Use a fixed delta time  ( fdelta_time ) or the duration betweend to calls ( repaint_speed ) to update ?
+    , delta_time is sent through the hierarchy to inform all the elements of the scene.
+    , fdelta_time is used to du fixed update, do update if and only if elapsed time is higher or equal to fdelta_time.
+> Use other technologies such as:
+    , Android
+    , Arduino
+    , 3D Holographic Display
+    , IA Algorithms
+> Use Qt library for rapid and easy alternative solution, but
+    , replace these alternatives with pure c/c++.
+> Use the platform of 'Codingame.com' to make Interactive Tutorials.
+    , Tutorials that combine 'PlayingGames' and 'Writing Real Code' to test it inside that game
+    , These games are just small scenes for a specific idea. ( Context of the tutorial )
+> Can we create a game object without any parent ?!
+    , in case of detachChild ? setParent( nullptr ) ?
+    , problem: worldTransform will not be defined ...
+> Do not allow direct instantiation for any component except inside GameObject. ?
+> Animation system:
+    AnimationClip:          Defines keyframes
+    Animation:              Defines how it is played ?! ( used for legacy animating )
+    Animator:               Defines the state machine playing animations
+    AnimatorController:     Defines an interface for editing an Animator
+
+--------------------------------------------------------------------------------
+#Almost/Achieved classes
+-QSFMLCanvas
+-GameInfo
+-Scene
+-Object
+-GameObject
+-Component
+-Transform
+-Camera
+-Behaviour
+
+
+#Blank classes
+-Gui
+-MonoBehaviour
+-Renderer
+
+#Callbacks
+-onPreRender()          :   Camera
+-onPostRender()         :   Camera
+-onBecameInvisible()    :   Renderer
+-onBecameVisile()       :   Renderer
