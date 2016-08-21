@@ -1,9 +1,0 @@
-<map id="/doc/projects/cpp/GameDevFramework_v5/include/resource_management/spritetile.h" name="/doc/projects/cpp/GameDevFramework_v5/include/resource_management/spritetile.h">
-<area shape="rect" id="node3" href="$resource_8h.html" title="resource_management\l/resource.h" alt="" coords="1203,109,1358,151"/>
-<area shape="rect" id="node7" href="$object_8h.html" title="kernel/object.h" alt="" coords="797,199,903,225"/>
-<area shape="rect" id="node10" href="$gameinfo_8h.html" title="kernel/gameinfo.h" alt="" coords="983,273,1109,300"/>
-<area shape="rect" id="node23" href="$scene_8h.html" title="kernel/scene.h" alt="" coords="601,273,707,300"/>
-<area shape="rect" id="node16" href="$kernelrules_8h.html" title="kernel/kernelrules.h" alt="" coords="849,348,984,375"/>
-<area shape="rect" id="node19" href="$terminal__colors_8h.html" title="Core/Utilities/terminal\l_colors.h" alt="" coords="351,423,499,464"/>
-<area shape="rect" id="node20" href="$hierarchicalcontainer_8h.html" title="hierarchicalcontainer.h" alt="" coords="521,348,673,375"/>
-</map>

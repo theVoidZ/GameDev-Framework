@@ -1,9 +1,0 @@
-<map id="MonoBehavior" name="MonoBehavior">
-<area shape="rect" id="node6" href="$class_arduino_test.html" title="NOTE: Arduino Behavior, Is abstract because it MUST contain its own logic. " alt="" coords="5,379,97,405"/>
-<area shape="rect" id="node7" href="$class_move_object.html" title="MoveObject" alt="" coords="121,379,213,405"/>
-<area shape="rect" id="node8" href="$class_simulator_component.html" title="SimulatorComponent" alt="" coords="238,379,382,405"/>
-<area shape="rect" id="node9" href="$class_velocity_def.html" title="VelocityDef" alt="" coords="406,379,497,405"/>
-<area shape="rect" id="node2" href="$class_behavior.html" title="Behavior" alt="" coords="201,229,275,256"/>
-<area shape="rect" id="node3" href="$classgdf_1_1kernel_1_1_component.html" title="The Component class is used to define a specific logic and add it to an object (HierarchicalContainer..." alt="" coords="159,155,317,181"/>
-<area shape="rect" id="node4" href="$classgdf_1_1kernel_1_1_object.html" title="Base class for most objects of the Framework. " alt="" coords="173,80,303,107"/>
-</map>

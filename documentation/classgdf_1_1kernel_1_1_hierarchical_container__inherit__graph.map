@@ -1,7 +1,0 @@
-<map id="gdf::kernel::HierarchicalContainer" name="gdf::kernel::HierarchicalContainer">
-<area shape="rect" id="node2" href="$classgdf_1_1kernel_1_1_game_info.html" title="GameInfo is a class that represents the main class of the application. " alt="" coords="5,95,153,121"/>
-<area shape="rect" id="node4" href="$classgdf_1_1kernel_1_1_game_object.html" title="The GameObject class represents a node&#39;s scene. " alt="" coords="177,95,341,121"/>
-<area shape="rect" id="node5" href="$classgdf_1_1kernel_1_1_scene.html" title="The Scene class is the base class for all scenes. " alt="" coords="366,95,494,121"/>
-<area shape="rect" id="node3" href="$class_test_case_game_info.html" title="TestCaseGameInfo" alt="" coords="11,169,147,196"/>
-<area shape="rect" id="node6" href="$class_test_case_scene.html" title="TestCaseScene" alt="" coords="372,169,488,196"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="MoveObject" name="MoveObject">
-<area shape="rect" id="node2" href="$class_mono_behavior.html" title="MonoBehavior" alt="" coords="32,304,137,331"/>
-<area shape="rect" id="node3" href="$class_behavior.html" title="Behavior" alt="" coords="48,229,121,256"/>
-<area shape="rect" id="node4" href="$classgdf_1_1kernel_1_1_component.html" title="The Component class is used to define a specific logic and add it to an object (HierarchicalContainer..." alt="" coords="5,155,164,181"/>
-<area shape="rect" id="node5" href="$classgdf_1_1kernel_1_1_object.html" title="Base class for most objects of the Framework. " alt="" coords="20,80,149,107"/>
-</map>
