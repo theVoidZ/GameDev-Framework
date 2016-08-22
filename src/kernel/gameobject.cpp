@@ -3,7 +3,6 @@
 #include "Core/System/transform.h"
 #include "Core/Graphic/renderer.h"
 #include "Core/System/monobehavior.h"
-#include "kernel/garbagecollector.h"
 
 #include "Core/Utilities/algorithm.h"
 
@@ -319,36 +318,6 @@ void GameObject::broadcast_message( const char* method_name, std::vector< QVaria
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-GameObject* GameObject::instantiate(){
-    return GameObject::instantiate(nullptr);
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-GameObject* GameObject::instantiate(std::string go_name, sf::Vector2f pos, float rotation){
-    return GameObject::instantiate(nullptr, go_name, pos, rotation);
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-GameObject* GameObject::instantiate(Transform* parent, std::string go_name, sf::Vector2f pos, float rotation){
-    GameObject* go = new GameObject();
-    if( parent != nullptr ){
-        parent->attach_child(go->transform());
-    }else{
-        // if parent is nullptr, attach it to the Root
-        gdf::kernel::GameInfo::game_info->active_scene()->root()->transform_->attach_child(go->transform());
-    }
-
-    go->name_ = go_name;
-    go->transform_->set_position(pos);
-    go->transform_->set_rotation(rotation);
-
-    //! WARNING: This is moved and handled by the Chrono component.
-    //! Spawn time now depends on the Chrono instance.
-//    go->spawn_time_ = go->transform->getRoot()->game_object()->getScene()->life_time();
-    return go;
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GameObject::destroy(GameObject *go, unsigned long long ttd_ms){
     // Change:
     // In order to reduce class-dependability
@@ -358,50 +327,36 @@ void GameObject::destroy(GameObject *go, unsigned long long ttd_ms){
     // HOW to define the Junk list ? simple container or component ?
 
     // locate the root, because only the root is binded to the scene.
-    Transform* t = go->transform_;
-    while( t->getParent() != nullptr ){
-        t = t->getParent();
-    }
 
     // if the top most transform is for a Root. ( isRoot: game_object.scene != nullptr )
-    if( t->game_object()->scene() != nullptr ){
+    if( go->scene() != nullptr ){
         // it is root
         // add to GC of the root's scene
-        t->game_object()->scene()->getComponent<gdf::kernel::GarbageCollector>()->collect(go, sf::milliseconds(ttd_ms) );
+
+        go->scene()->junkyard().insert( std::pair<GameObject*, sf::Time>(go, sf::milliseconds(ttd_ms) ) );
     }else{
         // it is not attached to a root ( orphan )
         // add to GC4Orphans
-        gdf::kernel::GameInfo::game_info->getComponent<gdf::kernel::GarbageCollector>()->collect(go, sf::milliseconds(ttd_ms) );
+        go->scene()->global_junkyard_.insert( std::pair<GameObject*, sf::Time>(go, sf::milliseconds(ttd_ms) ) );
     }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GameObject::destroy(Component *comp, unsigned long long ttd_ms){
-    //! BUG: You cant destroy anything, object must have a hirerachical structure in order to get the scene
-    //! NOTE: Create a commong 'static' variable for a group of object ????
-    //! USING a static const inside a TEMPLATE-function ........ like in template meta-programming
-
-    //! GC: Use timer according to the GC owner.
     if( comp->game_object() == nullptr ){
         // add to GC4Orphans
-        gdf::kernel::GameInfo::game_info->getComponent<gdf::kernel::GarbageCollector>()->collect(comp, sf::milliseconds(ttd_ms) );
+        comp->game_object()->scene()->junkyard().insert( std::pair<Component*, sf::Time>(comp, sf::milliseconds(ttd_ms) ) );
     }else{
-        // locate the root
-        Transform* t = comp->game_object()->transform();
-        while( t->getParent() != nullptr ){
-            t = t->getParent();
-        }
-
         // if the top most transform is for a Root. ( isRoot: game_object.scene != nullptr )
-        if( t->game_object()->scene() != nullptr ){
+        if( comp->game_object()->scene() != nullptr ){
             // it is root
             // add to GC of the root's scene
-            t->game_object()->scene()->getComponent<gdf::kernel::GarbageCollector>()->collect(comp, sf::milliseconds(ttd_ms) );
+            comp->game_object()->scene()->junkyard().insert( std::pair<Component*, sf::Time>(comp, sf::milliseconds(ttd_ms) ) );
         }else{
             // it is not attached to a root ( orphan )
             // add to GC4Orphans
             // Instead of calling the Gc, add the object to the junkcontainer
-            gdf::kernel::GameInfo::game_info->getComponent<gdf::kernel::GarbageCollector>()->collect(comp, sf::milliseconds(ttd_ms) );
+            comp->game_object()->scene()->global_junkyard_.insert( std::pair<Component*, sf::Time>(comp, sf::milliseconds(ttd_ms) ) );
         }
     }
 }

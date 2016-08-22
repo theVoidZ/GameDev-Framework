@@ -110,4 +110,45 @@ void GameObject::getComponentsInChildren_recursive(std::list<T*>* result, const 
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+template< int scene_index>
+GameObject* GameObject::instantiate(){
+    return GameObject::instantiate<scene_index>(nullptr);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+template< int scene_index>
+GameObject* GameObject::instantiate(std::string go_name, sf::Vector2f pos, float rotation){
+    return GameObject::instantiate<scene_index>(nullptr, go_name, pos, rotation);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+template< int scene_index>
+GameObject* GameObject::instantiate(Transform* parent, std::string go_name, sf::Vector2f pos, float rotation){
+    GameObject* go = new GameObject();
+    if( parent != nullptr ){
+        parent->attach_child(go->transform());
+    }else{
+        // if parent is nullptr, attach it to the Root
+        auto sc = GameInfo::game_info->scenes().find(scene_index);
+        if( sc != GameInfo::game_info->scenes().end() ){
+            go->scene_ = gdf::kernel::GameInfo::game_info->scenes()[scene_index];
+            go->scene_->root()->transform_->attach_child(go->transform());
+        }else{
+            std::cout << FRED << BOLD << "Scene #" << scene_index << " do not exist, GameObject::instantiante aborted" << RESET << std::endl;
+            return nullptr;
+        }
+    }
+
+    go->name_ = go_name;
+    go->transform_->set_position(pos);
+    go->transform_->set_rotation(rotation);
+
+    //! WARNING: This is moved and handled by the Chrono component.
+    //! Spawn time now depends on the Chrono instance.
+//    go->spawn_time_ = go->transform->getRoot()->game_object()->getScene()->life_time();
+    return go;
+}
+
+
 }}

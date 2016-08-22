@@ -10,6 +10,8 @@
 namespace gdf {
 namespace kernel{
 
+std::map<Object*, sf::Time> Scene::global_junkyard_;
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 Scene::Scene()
 {
@@ -31,7 +33,7 @@ void Scene::init(){
     root_ = new GameObject();
 
     // Binds the scene and the root object
-    root_->scene_ = this;
+    root_->scene_ = this; // to be changed
 
     // Init the specific properties of the scene - used on overridden scenes
     on_init();
@@ -44,13 +46,13 @@ void Scene::init(){
     // Loading resources
     load_resources();
 
-    //Build from save-files.
-    //build_from( file(json or XML) );
-    //Build from code. ( statically )
+}
+
+void Scene::post_init(){
+
     build();
 
-
-    // Init all the gameobjects of the hierarchy ( not attached gameobject are not inited )
+    // Init the Root, gameobjects and all their components ( must be called after build
     root_->init();
 
     // Mark the scene as Loaded
@@ -229,7 +231,7 @@ void Scene::render(){
             gdf::kernel::GameInfo::game_info->setView( camera->getView() );
 
             // Fires only on local GameObject
-            foreach (MonoBehavior* m, camera->getComponentsOfType<MonoBehavior>() ) {
+            foreach (MonoBehavior* m, camera->game_object()->getComponentsOfType<MonoBehavior>() ) {
                 if( m->is_enabled() ){
                     //! CLBK: onPreRender
                     m->on_pre_render( camera );
@@ -240,7 +242,7 @@ void Scene::render(){
             gdf::kernel::GameInfo::game_info->sf::RenderWindow::draw( *root_ );
 
             // Fires only on local GameObject
-            foreach (MonoBehavior* m, camera->getComponentsOfType<MonoBehavior>() ) {
+            foreach (MonoBehavior* m, camera->game_object()->getComponentsOfType<MonoBehavior>() ) {
                 if( m->is_enabled() ){
                     //! CLBK: onPostRender
                     m->on_post_render( camera );
@@ -283,7 +285,7 @@ std::list<GameObject*>& Scene::game_objects(){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-std::map<Object*, unsigned long long>& Scene::junkyard(){
+std::map<Object*, sf::Time>& Scene::junkyard(){
     return junkyard_;
 }
 
@@ -301,5 +303,10 @@ bool Scene::is_loaded() const{
 sf::Color Scene::clear_color() const{
     return clear_color_;
 }
+
+std::string Scene::name() const{
+    return name_;
+}
+
 
 }}

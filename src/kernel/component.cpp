@@ -1,5 +1,7 @@
 #include "component.h"
 
+#include "kernel/gameobject.h"
+
 namespace gdf {
 namespace kernel{
 
@@ -21,7 +23,7 @@ Component::~Component(){
     // Unlink the component ( reference loss ? )
     if( this->parents_components_.size() == 0 ){
         if( game_object() != nullptr ){
-            this->game_object()->top_most_items.remove(this);
+            host_object_->top_most_items.remove(this);
         }
     }else{
         for( auto it = this->parents_components_.begin(); it != this->parents_components_.end(); it++ ){
@@ -33,7 +35,7 @@ Component::~Component(){
     // Here comes the virtual destructor ?
 
     if( game_object() != nullptr ){
-        game_object()->all_items.remove(this);
+        host_object_->all_items.remove(this);
     }
 }
 
@@ -68,7 +70,7 @@ void Component::broadcast_message(const char *method_name, std::vector<QVariant>
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-void Component::set_host_object(HierarchicalContainer* ho){
+void Component::set_host_object(ComponentContainer* ho){
     host_object_ = ho;
 }
 

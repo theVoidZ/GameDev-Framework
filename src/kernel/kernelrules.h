@@ -15,10 +15,10 @@ namespace kernel{
 /// \brief The KernelRules class defines a set of rules in order to check the satisfiability of the add
 /// and the remove actions.
 ///
-/// It is mainly used with \a HierarchicalContainer::addComponent and \a GameObject::destroy in order to
+/// It is mainly used with \a ComponentContainer::addComponent and \a GameObject::destroy in order to
 /// check whether these actions can be performed.
 ///
-/// Since, the HierarchicalContainer defines a dependency relationship between components, whenever
+/// Since, the ComponentContainer defines a dependency relationship between components, whenever
 /// addComponent is invoked on \a T ( template method ). A checking process must be performed in order to
 /// verify the satisfiability of the 'T rule'.
 ///
@@ -50,7 +50,7 @@ namespace kernel{
 /// \section Multiplicity
 /// Another rule type is about instance multiplicity.
 ///
-/// These set of rules allow a limited number of T-type Component within the same GameObject/HierarchicalContainer.
+/// These set of rules allow a limited number of T-type Component within the same GameObject/ComponentContainer.
 ///
 /// \code
 /// //kernelrules
@@ -96,7 +96,7 @@ class KernelRules {
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// \brief Default destructor
-        ~KernelRules();
+        virtual ~KernelRules();
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////

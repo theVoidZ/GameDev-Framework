@@ -20,9 +20,9 @@
 #include "kernel/object.h"
 #include "Core/gotag.h"
 #include "Core/golayer.h"
-#include "kernel/hierarchicalcontainer.h"
+#include "kernel/componentcontainer.h"
 
-class Transform;
+#include "Core/System/transform.h"
 
 namespace gdf {
 namespace kernel{
@@ -44,7 +44,7 @@ class Scene;
 class GameObject final :    public Object,
                             protected sf::NonCopyable,
                             protected sf::Drawable,
-                            public HierarchicalContainer
+                            public ComponentContainer
 {
     friend class gdf::kernel::Scene;
 
@@ -145,23 +145,23 @@ class GameObject final :    public Object,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public:
-        // Complements to methods in "HierarchicalContainer" when the host is involved in a hierarchy.
+        // Complements to methods in "ComponentContainer" when the host is involved in a hierarchy.
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponent, but invoked from the parent of this game object.
+        /// \brief Similar to \a ComponentContainer::getComponent, but invoked from the parent of this game object.
         ///
         template< typename T >
         T* getComponentInParent() const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponents, but invoked from the parent of this game object.
+        /// \brief Similar to \a ComponentContainer::getComponents, but invoked from the parent of this game object.
         ///
         template< typename T >
         std::list<T*> getComponentsInParent() const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponentOfType, but invoked from the parent of this
+        /// \brief Similar to \a ComponentContainer::getComponentOfType, but invoked from the parent of this
         /// game object.
         ///
         template< typename T >
@@ -169,7 +169,7 @@ class GameObject final :    public Object,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponentsOfType, but invoked from the parent of this
+        /// \brief Similar to \a ComponentContainer::getComponentsOfType, but invoked from the parent of this
         /// game object.
         ///
         template< typename T >
@@ -177,14 +177,14 @@ class GameObject final :    public Object,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponent, but invoked for all children of of this
+        /// \brief Similar to \a ComponentContainer::getComponent, but invoked for all children of of this
         ///
         template< typename T >
         T* getComponentInChildren() const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponents, but invoked for all children of of this
+        /// \brief Similar to \a ComponentContainer::getComponents, but invoked for all children of of this
         /// game object.
         ///
         template< typename T >
@@ -192,7 +192,7 @@ class GameObject final :    public Object,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponentOfType, but invoked for all children of of this
+        /// \brief Similar to \a ComponentContainer::getComponentOfType, but invoked for all children of of this
         /// game object.
         ///
         template< typename T >
@@ -200,7 +200,7 @@ class GameObject final :    public Object,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Similar to \a HierarchicalContainer::getComponentsOfType, but invoked for all children of of this
+        /// \brief Similar to \a ComponentContainer::getComponentsOfType, but invoked for all children of of this
         /// game object.
         ///
         template< typename T >
@@ -296,6 +296,7 @@ class GameObject final :    public Object,
         ///
         /// \return Instance of GameObject
         ///
+        template< int scene_index>
         static GameObject* instantiate();
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -306,6 +307,7 @@ class GameObject final :    public Object,
         /// \param rotation Initial rotation
         /// \return Instance of GameObject
         ///
+        template< int scene_index>
         static GameObject* instantiate(std::string go_name, sf::Vector2f pos = sf::Vector2f(0,0), float rotation = 0);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -318,6 +320,7 @@ class GameObject final :    public Object,
         /// \param rotation Initial rotation
         /// \return Instance of GameObject
         ///
+        template< int scene_index>
         static GameObject* instantiate(Transform* parent, std::string go_name = "", sf::Vector2f pos = sf::Vector2f(0,0), float rotation = 0);
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -444,6 +447,7 @@ class GameObject final :    public Object,
         ///
         gdf::kernel::Scene* scene_ = nullptr;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 };
 

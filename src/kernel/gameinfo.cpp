@@ -46,6 +46,20 @@ GameInfo::~GameInfo(){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+int GameInfo::add_scene(Scene *scene, std::string name, bool is_daemon){
+    static int scene_id = -1;
+    if( scene != nullptr ){
+        scene_id ++;
+        scene->is_daemon_ = is_daemon;
+        scene->name_ = name;
+        scenes_[scene_id] = scene;
+        return scene_id;
+    }else{
+        return -1;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GameInfo::init(){
     // GameInfo specific's init, used when overriding this class
     on_init();
@@ -56,11 +70,17 @@ void GameInfo::init(){
     }
 
     // Scenes init
-    std::map<std::string, Scene*>::iterator it;
+    std::map<unsigned int, Scene*>::iterator it;
     // All scenes are inited, whether they are daemons or not.
     for( it=scenes_.begin(); it!=scenes_.end(); it++ ){
         if( (*it).second != nullptr )
             (*it).second->init();
+    }
+
+    // All scenes are post_inited, whether they are daemons or not.
+    for( it=scenes_.begin(); it!=scenes_.end(); it++ ){
+        if( (*it).second != nullptr )
+            (*it).second->post_init();
     }
 
     // reset clock ( clock )
@@ -104,6 +124,7 @@ void GameInfo::handle_events(){
     sf::Event event;
 
     while( this->pollEvent(event) ){
+
         on_event(event);
 
         // Transfer captured events to the active scene only
@@ -127,7 +148,7 @@ void GameInfo::update(sf::Time dt){
     }
 
     // Update daemon scenes
-    std::map<std::string, Scene*>::iterator it;
+    std::map< unsigned int, Scene*>::iterator it;
     for( it=scenes_.begin(); it!=scenes_.end(); it++ ){
         if( (*it).second != nullptr && (*it).second != active_scene_ && (*it).second->is_daemon() == true && (*it).second->is_loaded() ){
             (*it).second->update(dt);
@@ -143,7 +164,7 @@ void GameInfo::fixed_update(sf::Time dt){
     }
 
     // Update the physics of daemon scenes
-    std::map<std::string, Scene*>::iterator it;
+    std::map<unsigned int, Scene*>::iterator it;
     for( it=scenes_.begin(); it!=scenes_.end(); it++ ){
         if( (*it).second != nullptr && (*it).second != active_scene_ && (*it).second->is_daemon() == true && (*it).second->is_loaded() ){
             (*it).second->fixed_update(dt);
@@ -159,7 +180,7 @@ void GameInfo::late_update(sf::Time dt){
     }
 
     // Late update the daemon scenes
-    std::map<std::string, Scene*>::iterator it;
+    std::map<unsigned int, Scene*>::iterator it;
     for( it=scenes_.begin(); it!=scenes_.end(); it++ ){
         if( (*it).second != nullptr && (*it).second != active_scene_ && (*it).second->is_daemon() ){
             (*it).second->late_update(dt);
@@ -170,8 +191,12 @@ void GameInfo::late_update(sf::Time dt){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GameInfo::render(){
     // Draw is applied only to the active scene
-    if( active_scene_ == nullptr )
+    if( active_scene_ == nullptr ){
+        // In case there is no active scene, display back screen
+        this->clear( sf::Color::Black );
+        this->display();
         return;
+    }
 
     // Clear the screen
     this->clear( active_scene_->clear_color() );
@@ -190,25 +215,36 @@ void GameInfo::render(){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-void GameInfo::set_active_scene(std::string scene_name){
-    std::map<std::string, Scene*>::iterator it;
+void GameInfo::set_active_scene(unsigned int scene_id){
+    std::map<unsigned int, Scene*>::iterator it;
 
-    it = scenes_.find(scene_name);
+    it = scenes_.find(scene_id);
     if( it != scenes_.end() ){
         active_scene_ = (*it).second;
     }else{
-        std::cout << FORANGE << BOLD << "GameInfo::set_active_scene" << RESET_BOLD << " - Invalid scene name " << ITALIC << "'" << scene_name << "'" << RESET_ITALIC << " [previous scene kept]" << RESET << std::endl;
+        std::cout << FORANGE << BOLD << "GameInfo::set_active_scene" << RESET_BOLD << " - Invalid scene id " << RESET << std::endl;
+        active_scene_ = nullptr;
     }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-std::map<std::string, Scene* >& GameInfo::scenes(){
-    return scenes_;
+void GameInfo::set_active_scene(std::string scene_name){
+    std::map<unsigned int, Scene*>::iterator it;
+
+    for(it=scenes_.begin(); it!=scenes_.end(); it++ ){
+        if( (*it).second->name() == scene_name ){
+            active_scene_ = (*it).second;
+            return;
+        }
+    }
+
+    std::cout << FORANGE << BOLD << "GameInfo::set_active_scene" << RESET_BOLD << " - Invalid scene id " << RESET << std::endl;
+    active_scene_ = nullptr;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-std::map<Object*, unsigned long long>& GameInfo::junkyard(){
-    return junkyard_;
+std::map<unsigned int, Scene*>& GameInfo::scenes(){
+    return scenes_;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////

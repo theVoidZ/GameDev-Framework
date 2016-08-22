@@ -22,14 +22,13 @@
 // user-includes
 #include "kernel/kernelrules.h"
 #include "Core/Utilities/terminal_colors.h"
-#include "hierarchicalcontainer.h"
+#include "componentcontainer.h"
 
 namespace gdf {
 namespace kernel {
 
 class Scene;
 class Object;
-class Component;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// \brief GameInfo is a class that represents the main class of the application.
@@ -41,9 +40,9 @@ class Component;
 ///
 /// You can override this class in order to implement your own GameLogic ( from scratch )
 ///
-/// \note GameInfo inherits from \a HierarchicalContainer which provides it with a Component Container.
+/// \note GameInfo inherits from \a ComponentContainer which provides it with a Component Container.
 class GameInfo :    public sf::RenderWindow,
-                    public HierarchicalContainer
+                    public ComponentContainer
 {
 
     public :
@@ -61,6 +60,17 @@ class GameInfo :    public sf::RenderWindow,
         /// \brief Default destructor
         ///
         ~GameInfo();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief add_scene Add a scene to the GameInfo
+        /// \param scene Instance to the Scene
+        /// \param name Name of the scene
+        /// \param is_daemon Set initially to daemon or not
+        /// \return Id of the created Scene.
+        ///
+        int add_scene( Scene* scene, std::string name, bool is_daemon = false );
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public:
@@ -180,9 +190,15 @@ class GameInfo :    public sf::RenderWindow,
     public:
         // Setters
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Set the scene 'scene_name' as active.
+        /// \brief Set a scene from id as active.
         ///
-        /// If the scene name does not exist, the previous scene is kept active.
+        /// \param scene_id The scene index to set to active
+        ///
+        void set_active_scene(unsigned int scene_id );
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Set a scene from name as active.
         ///
         /// \param scene_name The scene name to set to active
         ///
@@ -197,14 +213,7 @@ class GameInfo :    public sf::RenderWindow,
         ///
         /// \return All available scenes
         ///
-        std::map< std::string, Scene* >& scenes();
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Retrieve the list of discarded objects, ready to be destroyed
-        /// \return List of objects.
-        ///
-        std::map<Object*, unsigned long long>& junkyard();
+        std::map< unsigned int, Scene* >& scenes();
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -239,7 +248,7 @@ class GameInfo :    public sf::RenderWindow,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// \brief List of named scenes of the game info.
         ///
-        std::map< std::string, Scene* > scenes_;
+        std::map< unsigned int, Scene* > scenes_;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -248,19 +257,6 @@ class GameInfo :    public sf::RenderWindow,
         /// The active scene is an item of the \a scenes container.
         ///
         Scene* active_scene_ = nullptr;
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief A container to hold all objects marked for destruction [NOT USED]
-        ///
-        /// A Garbage Collector will bind to this container to process and destroy the objects
-        ///
-        /// \attention Requires a base class, such as Object.
-        /// \note Only objects of type \a Object are destroyable.
-        ///
-        /// \attention This will be used with GC later
-        ///
-        std::map< Object*, unsigned long long > junkyard_;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 };
