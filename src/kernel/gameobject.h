@@ -18,12 +18,15 @@
 
 // user-includes
 #include "kernel/object.h"
-#include "Core/gotag.h"
-#include "Core/golayer.h"
+//#include "Core/gotag.h"
+//#include "Core/golayer.h"
 #include "kernel/componentcontainer.h"
 
-#include "Core/transform.h"
 #include "kernel/hierarchy.h"
+
+//! NOTE: need to include the header of transform
+#include "Core/transform.h"
+
 
 namespace gdf {
 namespace kernel{
@@ -40,8 +43,8 @@ class Hierarchy;
 ///
 /// This class provides a set of tools to in order to manipulate these components.
 ///
-/// \section Transform
-/// Since the game object is a scene node, it has a pre-created \a Transform Component that helps creating the
+/// \section Hierarchy
+/// Since the game object is a scene node, it has a pre-created \a Hierarchy Component that helps creating the
 /// tree structure.
 class GameObject final :    public Object,
                             protected sf::NonCopyable,
@@ -72,21 +75,6 @@ class GameObject final :    public Object,
         /// \brief Displays a detailed information about the game object
         ///
         void verbose();
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    protected:
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Overridden funtion from sf::Drawable::draw , used to draw the game object.
-        ///
-        /// Since the Game Object does not represent a concrete object, drawing a game objec will draw all the
-        /// drawable component of that game object, See \a Renderer
-        ///
-        /// The drawing process is performed in a recursive way, in depth-first according to the arborescence.
-        ///
-        /// \param target RenderTarget
-        /// \param states RenderState
-        ///
-        void draw( sf::RenderTarget &target, sf::RenderStates states) const override;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public:
@@ -144,6 +132,21 @@ class GameObject final :    public Object,
         /// \param dt The elapsed amount of time between two calls
         ///
         void late_update(sf::Time dt);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    protected:
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Overridden funtion from sf::Drawable::draw , used to draw the game object.
+        ///
+        /// Since the Game Object does not represent a concrete object, drawing a game objec will draw all the
+        /// drawable component of that game object, See \a Renderer
+        ///
+        /// The drawing process is performed in a recursive way, in depth-first according to the arborescence.
+        ///
+        /// \param target RenderTarget
+        /// \param states RenderState
+        ///
+        void draw( sf::RenderTarget &target, sf::RenderStates states) const override;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public:
@@ -380,17 +383,16 @@ class GameObject final :    public Object,
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Retrieves the transform component attached to the game object.
+        /// \brief Retrieves the hierarchy component attached to the game object.
         ///
-        /// \return Transform of the game object
+        /// \return Hierarchy of the game object
         ///
-        Transform* transform() const;
         Hierarchy* hierarchy() const;
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Retrieves the parent of the game object, through the transform component
+        /// \brief Retrieves the parent of the game object, through the hierarchy component
         ///
         /// \return Parent game object
         ///
@@ -399,7 +401,7 @@ class GameObject final :    public Object,
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Retrieves the children of the game object, through the transform component
+        /// \brief Retrieves the children of the game object, through the hierarchy component
         ///
         /// \return Children of the game object
         ///
@@ -432,13 +434,6 @@ class GameObject final :    public Object,
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// \brief Physical coordinates of the game object.
-        ///
-        /// Transform component allows the game object to be located in a 2-dimensional coordiante system.
-        ///
-        /// It gives him a position, a rotation, and a scale.
-        ///
-        Transform* transform_ = nullptr;
         Hierarchy* hierarchy_ = nullptr;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 

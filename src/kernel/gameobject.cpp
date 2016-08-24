@@ -1,9 +1,6 @@
 #include "gameobject.h"
 
-#include "Core/Graphic/renderer.h"
 #include "Core/System/monobehavior.h"
-
-#include "Core/Utilities/algorithm.h"
 
 namespace gdf {
 namespace kernel{
@@ -39,8 +36,7 @@ GameObject::GameObject(std::string go_name)
     }
 */
 
-    // Creates and Initialize the transform.
-    transform_ = addComponent<Transform>();
+    // Creates and Initialize the hierarchy.
     hierarchy_ = addComponent<Hierarchy>();
 }
 
@@ -86,30 +82,6 @@ void GameObject::verbose(){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-void GameObject::draw( sf::RenderTarget &target, sf::RenderStates states) const{
-    if( !active_in_hierarchy() )
-        return;
-
-    sf::Transform t = sf::Transform::Identity;
-
-    states.transform *= transform_->get_matrix() * t;
-
-    // Retrieves all renderers to draw their graphic component.
-    std::list< Renderer* > rend_l = this->getComponentsOfType<Renderer>();
-
-    //There is no control on Renderers.
-    //but Further: they will have an 'enabled' member.
-    for( Renderer* r : rend_l ){
-        r->draw( target, states );
-    }
-
-    //Invoke draw recursively on every child.
-    for( Hierarchy* child : hierarchy_->children() ){
-        child->game_object()->draw(target, states);
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GameObject::init(){
     //! NOTE: How to update components ? (
     //! They are structured in a graph, having several source-Nodes
@@ -131,7 +103,6 @@ void GameObject::update(sf::Time dt){
 
     //Invoke components.
     for( Component* c : all_items ){
-        //depending on the component type ? renderers, behaviours, others
         //! NOTE: HERE update, regular component
         c->update(dt);
 
@@ -194,6 +165,32 @@ void GameObject::late_update(sf::Time dt){
         child->game_object()->late_update(dt);
     }
 
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+void GameObject::draw( sf::RenderTarget &target, sf::RenderStates states) const{
+    if( !active_in_hierarchy() )
+        return;
+
+    sf::Transform t = sf::Transform::Identity;
+
+    //! WARNING: Recheck this part
+    sf::Transformable* tr;
+    if( (tr = getComponent<Transform>()) == nullptr ){
+        states.transform *= t;
+
+    }else{
+        states.transform *= tr->getTransform() * t;
+    }
+
+    foreach (Component* c , all_items) {
+        c->draw(target, states);
+    }
+
+    //Invoke draw recursively on every child.
+    for( Hierarchy* child : hierarchy_->children() ){
+        child->game_object()->draw(target, states);
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -381,13 +378,10 @@ bool GameObject::active_in_hierarchy() const{
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-Transform* GameObject::transform() const{
-    return transform_;
-}
-
 Hierarchy* GameObject::hierarchy() const{
     return hierarchy_;
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 GameObject* GameObject::parent() const{
     if( hierarchy_ != nullptr && hierarchy_->parent() != nullptr ){

@@ -141,8 +141,8 @@ GameObject* GameObject::instantiate(Hierarchy* parent, std::string go_name, sf::
     }
 
     go->name_ = go_name;
-    go->transform_->set_position(pos);
-    go->transform_->set_rotation(rotation);
+//    go->transform_->set_position(pos);
+//    go->transform_->set_rotation(rotation);
 
     return go;
 }

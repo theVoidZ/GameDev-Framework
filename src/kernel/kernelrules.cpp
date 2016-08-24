@@ -35,7 +35,9 @@ void KernelRules::init(){
     make_singleton("TimeWinder");
     make_singleton("Chrono");
 
+    create_rule("Transform", "gdf::kernel::Hierarchy" );
     create_rule("VelocityDef", "gdf::kernel::Hierarchy" );
+    create_rule("VelocityDef", "Transform" );
     create_rule("ArduinoTest", "gdf::kernel::Hierarchy");
     create_rule("TimeKeeper", "Chrono");
     create_rule("GarbageCollector", "Chrono");

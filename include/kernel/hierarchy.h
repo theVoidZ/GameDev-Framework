@@ -23,25 +23,12 @@ class Hierarchy : public gdf::kernel::Component
 
         Hierarchy* detach();
 
+    public:
         void detach_children();
 
-    public:
         Hierarchy* get_child(int index ) const;
 
         bool is_child_of( Hierarchy* parent_ ) const;
-    public:
-
-//        //! Changes the index to the first ( among children )
-//        void set_as_first_sibling();
-
-//        //! Changes the index to the last ( among children )
-//        void set_as_sast_sibling();
-
-//        //! Changes the index to 'index' ( among children )
-//        void set_sibling_index( int index );
-
-//        //! Returns the index ( among children )
-//        int get_sibling_index() const; // ???
 
         // Getters
         //!
