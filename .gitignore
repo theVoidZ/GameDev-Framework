@@ -1,29 +1,29 @@
-# Special folder
-build/
-doc/diagram/
+# Temp file ignored
+*~
+
+
+# Special paths - tools
+doc/diagram/*
+doc/documentation/*
+doc/documentation_kernel/*
+external_docs/*
+sh/*
+
+# Special paths - All code
+Incursio/build/*
+Incursio/include/*
+src/*
 
 # Compiled Object files
-*.slo
-*.lo
 *.o
 *.obj
 
-# Precompiled Headers
-*.gch
-*.pch
-
 # Compiled Dynamic libraries
 *.so
-*.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
 
 # Compiled Static libraries
-*.lai
-*.la
 *.a
 *.lib
 
