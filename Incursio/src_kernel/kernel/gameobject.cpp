@@ -174,7 +174,6 @@ void GameObject::draw( sf::RenderTarget &target, sf::RenderStates states) const{
 
     sf::Transform t = sf::Transform::Identity;
 
-    //! WARNING: Recheck this part
     sf::Transformable* tr;
     if( (tr = getComponent<Transform>()) == nullptr ){
         states.transform *= t;

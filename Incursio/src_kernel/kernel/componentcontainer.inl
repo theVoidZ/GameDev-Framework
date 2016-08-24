@@ -13,7 +13,7 @@ T* ComponentContainer::addComponent(std::list<T*>* container){
 
     std::list<gdf::kernel::Component*> comp_requirement;
 
-    if( this->can_attach_component(c, &comp_requirement) ){
+    if( this->can_attach_component(this, c, &comp_requirement) ){
         //Make the gameobject linking
         c->set_host_object( this );
 
@@ -64,7 +64,6 @@ std::list<T*> ComponentContainer::getComponents() const{
 template< typename T >
 T* ComponentContainer::getComponentOfType() const{
     for( gdf::kernel::Component* c : all_items ){
-        /// QT: static_cast<QObject*>(c)->inherits( T::staticMetaObject.className() )
         if( static_cast<QObject*>(c)->inherits( T::staticMetaObject.className() ) ){
             return static_cast<T*>(c);
         }
@@ -77,7 +76,6 @@ template< typename T >
 std::list<T*> ComponentContainer::getComponentsOfType() const{
     std::list<T*> l;
     for( gdf::kernel::Component* c : all_items ){
-        /// QT: static_cast<QObject*>(c)->inherits( T::staticMetaObject.className() )
         if( static_cast<QObject*>(c)->inherits( T::staticMetaObject.className() ) ){
             l.push_back( static_cast<T*>(c) );
         }

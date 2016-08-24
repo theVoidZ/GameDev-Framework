@@ -27,8 +27,6 @@ namespace kernel {
 /// Object inherits from QObject for the one and only reason, to be part of the Qt meta-object-system.
 ///
 /// \note The qt-moc will be futher replaced by pure c++ mechanism.
-///
-/// QT: class Object : public QObject
 class Object : public QObject
 {
     Q_OBJECT

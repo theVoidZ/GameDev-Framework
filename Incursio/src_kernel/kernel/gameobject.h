@@ -235,8 +235,6 @@ class GameObject final :    public Object,
         ///
         /// \sa send_message_upwards, broadcast_message
         ///
-        /// QT: void send_message(const char* method_name, std::vector<QVariant> args ) const;
-        ///
         void send_message(const char* method_name, std::vector<QVariant> args ) const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -251,8 +249,6 @@ class GameObject final :    public Object,
         /// \param args Argument of the function
         ///
         /// \sa send_message_upwards, broadcast_message
-        ///
-        /// QT: void send_message(const char* method_name, std::vector<QVariant> args ) const;
         ///
         void send_message_upwards( const char* method_name, std::vector< QVariant > args ) const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -269,8 +265,6 @@ class GameObject final :    public Object,
         /// \param args Argument of the function
         ///
         /// \sa send_message_upwards, broadcast_message
-        ///
-        /// QT: void send_message(const char* method_name, std::vector<QVariant> args ) const;
         ///
         void broadcast_message(const char* method_name, std::vector<QVariant> args ) const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -39,6 +39,7 @@ class GameObject;
 /// n1 and n2.
 class ComponentContainer
 {
+//    Q_OBJECT
     public:
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// \brief Default constructor
@@ -165,7 +166,7 @@ class ComponentContainer
         /// combination with \a make_linking.
         /// \return True if the component can be attached, false otherwise.
         ///
-        bool can_attach_component(gdf::kernel::Component *comp, std::list< gdf::kernel::Component*> *lc ) const;
+        bool can_attach_component(ComponentContainer* host, gdf::kernel::Component *comp, std::list< gdf::kernel::Component*> *lc ) const;
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public:
