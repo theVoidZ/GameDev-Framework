@@ -12,7 +12,7 @@ sh/*
 # Special paths - All code
 Incursio/build/*
 Incursio/include/*
-src/*
+Incursio/src/*
 
 # Compiled Object files
 *.o
