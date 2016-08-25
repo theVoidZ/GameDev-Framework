@@ -64,7 +64,7 @@ Just after that, you can start building you first component by overriding the __
 __Creating new GameObject__
 ```C++
 gdf::kernel::GameObject* go = gdf::kernel::GameObject::instantiate<0>("g0"); 
-// instantiate<0> must is static and must the scene target: 0 is a reference to a scene.
+// instantiate<0> is static and must specify the scene target: 0 is a reference to a scene.
 	
 ```
 
