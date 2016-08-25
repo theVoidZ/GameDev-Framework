@@ -39,12 +39,15 @@ void KernelRules::init(){
     create_rule("VelocityDef", "gdf::kernel::Hierarchy" );
     create_rule("VelocityDef", "Transform" );
     create_rule("ArduinoTest", "gdf::kernel::Hierarchy");
+
     create_rule("TimeKeeper", "Chrono");
     create_rule("GarbageCollector", "Chrono");
 
     create_host_limitation_rule("GarbageCollector", "TestCaseScene");
     create_host_limitation_rule("GarbageCollector", "TestCaseGameInfo");
     create_host_limitation_rule("gdf::kernel::Hierarchy", "gdf::kernel::GameObject");
+    create_host_limitation_rule("ArduinoTest", "gdf::kernel::GameObject");
+
 
 }
 
