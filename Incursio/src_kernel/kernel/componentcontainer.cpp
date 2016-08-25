@@ -29,6 +29,8 @@ void ComponentContainer::make_linking(gdf::kernel::Component* comp, std::list<gd
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool ComponentContainer::can_attach_component(ComponentContainer* host, gdf::kernel::Component *comp, std::list< gdf::kernel::Component*> *lc ) const{
+    return true;
+/*
     // Or may be inherits ?
     bool host_limitation_rule = true;
 
@@ -128,7 +130,7 @@ bool ComponentContainer::can_attach_component(ComponentContainer* host, gdf::ker
 
     // Return the final result
     return host_limitation_rule && cardinality_result && comp_dependency_result;
-
+*/
 }
 
 }}
