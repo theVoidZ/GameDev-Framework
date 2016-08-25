@@ -1,18 +1,8 @@
 # Temp file ignored
 *~
 
-
-# Special paths - tools
-doc/diagram/*
-doc/documentation/*
-doc/documentation_kernel/*
-external_docs/*
-sh/*
-
 # Special paths - All code
 Incursio/build/*
-Incursio/include/*
-Incursio/src/*
 
 # Compiled Object files
 *.o
