@@ -1,15 +1,12 @@
 #ifndef COMPONENTCONTAINER_H
 #define COMPONENTCONTAINER_H
 
-#include <QObject>
-
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <list>
 
 #include <boost/type_index.hpp>
-
 
 #include "Core/Utilities/terminal_colors.h"
 
@@ -39,7 +36,6 @@ class GameObject;
 /// n1 and n2.
 class ComponentContainer
 {
-//    Q_OBJECT
     public:
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// \brief Default constructor

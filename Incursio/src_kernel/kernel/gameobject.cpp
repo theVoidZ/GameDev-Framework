@@ -76,7 +76,7 @@ void GameObject::verbose(){
     std::cout << FGREEN <<"--------------------------------------------------------------------------------" << std::endl;
     std::cout << BOLD << "#GameObject: " << RESET_BOLD << name_ << std::endl;
     for( Component* c : all_items ){
-        std::cout << "\t" << c->metaObject()->className() << std::endl;
+        std::cout << "\t" << boost::typeindex::type_id_runtime(*c).pretty_name() << std::endl;
     }
     std::cout << RESET;
 }
@@ -103,7 +103,6 @@ void GameObject::update(sf::Time dt){
 
     //Invoke components.
     for( Component* c : all_items ){
-        //! NOTE: HERE update, regular component
         c->update(dt);
 
     }
@@ -122,15 +121,7 @@ void GameObject::fixed_update(sf::Time dt){
 
     //Invoke components.
     for( Component* c : all_items ){
-        //! NOTE: HERE fixed update, includes PHYSIC components
-        if( c->inherits( MonoBehavior::staticMetaObject.className() ) ){
-            MonoBehavior* mbeh = static_cast<MonoBehavior*>(c);
-            if( mbeh->is_enabled() )
-                mbeh->fixed_update(dt);
-        }else{
-            // Update accordingly to the type of the component
-            // Physics: Rigidbodies
-        }
+        c->fixed_update(dt);
     }
 
     //Call update recursively
@@ -149,15 +140,7 @@ void GameObject::late_update(sf::Time dt){
 
     //Invoke components.
     for( Component* c : all_items ){
-        //! NOTE: HERE late update, usually monobehaviour ( user-reserved function )
-        if( c->inherits( MonoBehavior::staticMetaObject.className() ) ){
-            MonoBehavior* mbeh = static_cast<MonoBehavior*>(c);
-            if( mbeh->is_enabled() )
-                mbeh->late_update(dt);
-        }else{
-            // Update accordingly to the type of the component
-            // none
-        }
+        c->late_update(dt);
     }
 
     //Call update recursively
@@ -194,6 +177,7 @@ void GameObject::draw( sf::RenderTarget &target, sf::RenderStates states) const{
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 void GameObject::send_message( const char* method_name, std::vector< QVariant > args ) const{
+    /*
     std::list< MonoBehavior* > mono_l = getComponentsOfType< MonoBehavior >();
     for( MonoBehavior* m : mono_l ){
         switch( args.size() ){
@@ -287,6 +271,7 @@ void GameObject::send_message( const char* method_name, std::vector< QVariant > 
             break;
         }
     }
+    */
 
 }
 
@@ -294,7 +279,7 @@ void GameObject::send_message( const char* method_name, std::vector< QVariant > 
 void GameObject::send_message_upwards(const char* method_name, std::vector<QVariant> args ) const{
     Hierarchy* current = hierarchy_;
     while( current != nullptr ){
-        current->send_message(method_name, args );
+        current->game_object()->send_message(method_name, args );
         current = current->parent();
     }
 }
@@ -307,7 +292,7 @@ void GameObject::broadcast_message( const char* method_name, std::vector< QVaria
 
     //Invoke recursively on children
     for( Hierarchy* child : hierarchy_->children() ){
-        child->broadcast_message(method_name, args );
+        child->game_object()->broadcast_message(method_name, args );
     }
 }
 

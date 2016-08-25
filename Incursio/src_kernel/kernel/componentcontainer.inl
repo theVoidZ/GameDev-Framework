@@ -39,7 +39,10 @@ T* ComponentContainer::addComponent(std::list<T*>* container){
 template< typename T >
 T* ComponentContainer::getComponent() const{
     for( gdf::kernel::Component* c : all_items ){
-        if( strcmp(T::staticMetaObject.className(), static_cast<QObject*>(c)->metaObject()->className()) == 0 ){
+        boost::typeindex::type_index t1 = boost::typeindex::type_id_runtime(*c);
+        boost::typeindex::type_index t2 = boost::typeindex::type_id_with_cvr<T>();
+
+        if( t1.pretty_name() == t2.pretty_name() ){
             return static_cast<T*>(c);
         }
     }
@@ -52,7 +55,10 @@ template< typename T >
 std::list<T*> ComponentContainer::getComponents() const{
     std::list<T*> l;
     for( gdf::kernel::Component* c : all_items ){
-        if( strcmp(T::staticMetaObject.className(), static_cast<QObject*>(c)->metaObject()->className()) == 0 ){
+        boost::typeindex::type_index t1 = boost::typeindex::type_id_runtime(*c);
+        boost::typeindex::type_index t2 = boost::typeindex::type_id_with_cvr<T>();
+
+        if( t1.pretty_name() == t2.pretty_name() ){
             l.push_back( static_cast<T*>(c) );
         }
     }
@@ -64,8 +70,10 @@ std::list<T*> ComponentContainer::getComponents() const{
 template< typename T >
 T* ComponentContainer::getComponentOfType() const{
     for( gdf::kernel::Component* c : all_items ){
-        if( static_cast<QObject*>(c)->inherits( T::staticMetaObject.className() ) ){
+        if( dynamic_cast<T*>(c) != nullptr ){
             return static_cast<T*>(c);
+        }else{
+            return nullptr;
         }
     }
     return nullptr;
@@ -76,7 +84,7 @@ template< typename T >
 std::list<T*> ComponentContainer::getComponentsOfType() const{
     std::list<T*> l;
     for( gdf::kernel::Component* c : all_items ){
-        if( static_cast<QObject*>(c)->inherits( T::staticMetaObject.className() ) ){
+        if( dynamic_cast<T*>(c) != nullptr ){
             l.push_back( static_cast<T*>(c) );
         }
     }

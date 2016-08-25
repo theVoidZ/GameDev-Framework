@@ -8,7 +8,6 @@ namespace kernel {
 
 class Hierarchy : public gdf::kernel::Component
 {
-    Q_OBJECT
     public:
         Hierarchy();
         ~Hierarchy();

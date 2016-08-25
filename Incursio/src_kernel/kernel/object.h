@@ -3,6 +3,9 @@
 
 // c++-includes
 #include <string>
+#include <typeinfo>
+//#include <cxxabi.h>
+//#include <boost/type_index.hpp>
 
 // sfml-includes
 #include <SFML/System/Time.hpp>
@@ -23,13 +26,8 @@ namespace kernel {
 /// The Object class holds minor and common properties of objects such as the object name and the instance.
 ///
 /// It is basically used to achieve polymorphism.
-///
-/// Object inherits from QObject for the one and only reason, to be part of the Qt meta-object-system.
-///
-/// \note The qt-moc will be futher replaced by pure c++ mechanism.
-class Object : public QObject
+class Object
 {
-    Q_OBJECT
     public:
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////

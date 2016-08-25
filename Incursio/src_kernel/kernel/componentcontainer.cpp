@@ -29,9 +29,10 @@ void ComponentContainer::make_linking(gdf::kernel::Component* comp, std::list<gd
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool ComponentContainer::can_attach_component(ComponentContainer* host, gdf::kernel::Component *comp, std::list< gdf::kernel::Component*> *lc ) const{
-
     // Or may be inherits ?
     bool host_limitation_rule = true;
+
+    boost::typeindex::type_index t;
 
 //    // Host Dependency check
     for( auto it2 : KernelRules::kernel->hostobject_limitation_rules){
@@ -43,7 +44,6 @@ bool ComponentContainer::can_attach_component(ComponentContainer* host, gdf::ker
             if (std::any_of(it2.second.cbegin(), it2.second.cend(),
                         [this, host](std::string dependency){
                              //! FIXME: TO be implemented ( take in consideration ) inheritance...
-                             //! BUG: do not use QObject ( dimaond inheritance problem )
                              boost::typeindex::type_index t1 = boost::typeindex::type_id_runtime(*host);
                              if( t1.pretty_name() == dependency ){
                                  return true;
