@@ -35,7 +35,7 @@ The framework is built cross platform c++, extending the following labraires
 + Tested under Linux-Ubuntu 64bit GCC 5.4
 In order to generate the __.so file__, run the makefile by
 ```bash
-make
+> make
 ```
 
 # Getting started
