@@ -33,18 +33,8 @@ The framework is built cross platform c++, extending the following labraires
 #### __Compiling__
 
 + Tested under Linux-Ubuntu 64bit GCC 5.4
-+ Install the [Qt Library](https://www.qt.io/download/) to use __qmake__
-
-__You can either compile__
-
-* Using Qt-Creator, here is the pro-file [pro-file](./src/GameDevFramework.pro)
-* Using command-line
-In order to avoid some-problem with make path, ( like i had ), i create used qmake directly from its path.
+In order to generate the __.so file__, run the makefile by
 ```bash
-QMAKE=/path_to_your_Qt/Qt5.7.0/5.7/gcc_64/bin/qmake
-cd path_to_the_project/src/
-$QMAKE -project "QT += serialport" "INCLUDEPATH += /path/to/sfml/include" "LIBS += -L/pat/to/sfml/lib -lsfml-system -lsfml-graphics -lsfml-window" "CONFIG += c++14" "TARGET GameDev-kernel"
-$QMAKE
 make
 ```
 
