@@ -1,0 +1,1484 @@
+{
+    "map_name": "China",
+    "paths": [
+        {
+            "destination_id": "lanzhou",
+            "source_id": "urumqi",
+            "trail": [
+                [
+                    855.0,
+                    697.0
+                ],
+                [
+                    958.0,
+                    767.0
+                ],
+                [
+                    1000.0,
+                    770.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "urumqi",
+            "source_id": "lanzhou",
+            "trail": [
+                [
+                    1000.0,
+                    770.0
+                ],
+                [
+                    958.0,
+                    767.0
+                ],
+                [
+                    855.0,
+                    697.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xining",
+            "source_id": "urumqi",
+            "trail": [
+                [
+                    666.0,
+                    786.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "urumqi",
+            "source_id": "xining",
+            "trail": [
+                [
+                    666.0,
+                    786.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lhasa",
+            "source_id": "urumqi",
+            "trail": [
+                [
+                    380.0,
+                    570.0
+                ],
+                [
+                    350.0,
+                    700.0
+                ],
+                [
+                    340.0,
+                    930.0
+                ],
+                [
+                    400.0,
+                    1080.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "urumqi",
+            "source_id": "lhasa",
+            "trail": [
+                [
+                    400.0,
+                    1080.0
+                ],
+                [
+                    340.0,
+                    930.0
+                ],
+                [
+                    350.0,
+                    700.0
+                ],
+                [
+                    380.0,
+                    570.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xining",
+            "source_id": "lhasa",
+            "trail": [
+                [
+                    680.0,
+                    916.0
+                ],
+                [
+                    826.0,
+                    830.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lhasa",
+            "source_id": "xining",
+            "trail": [
+                [
+                    826.0,
+                    830.0
+                ],
+                [
+                    680.0,
+                    916.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "lhasa",
+            "trail": [
+                [
+                    744.0,
+                    1071.0
+                ],
+                [
+                    993.0,
+                    1038.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lhasa",
+            "source_id": "chengdu",
+            "trail": [
+                [
+                    993.0,
+                    1038.0
+                ],
+                [
+                    744.0,
+                    1071.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lanzhou",
+            "source_id": "xining",
+            "trail": []
+        },
+        {
+            "destination_id": "xining",
+            "source_id": "lanzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "xining",
+            "trail": [
+                [
+                    876.0,
+                    884.0
+                ],
+                [
+                    950.0,
+                    1050.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xining",
+            "source_id": "chengdu",
+            "trail": [
+                [
+                    950.0,
+                    1050.0
+                ],
+                [
+                    876.0,
+                    884.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chongqing",
+            "source_id": "chengdu",
+            "trail": []
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "chongqing",
+            "trail": []
+        },
+        {
+            "destination_id": "guiyang",
+            "source_id": "chengdu",
+            "trail": [
+                [
+                    1093.0,
+                    1173.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "guiyang",
+            "trail": [
+                [
+                    1093.0,
+                    1173.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "kunming",
+            "source_id": "chengdu",
+            "trail": [
+                [
+                    967.0,
+                    1176.0
+                ],
+                [
+                    1028.0,
+                    1226.0
+                ],
+                [
+                    1030.0,
+                    1287.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "kunming",
+            "trail": [
+                [
+                    1030.0,
+                    1287.0
+                ],
+                [
+                    1028.0,
+                    1226.0
+                ],
+                [
+                    967.0,
+                    1176.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "chengdu",
+            "trail": [
+                [
+                    1138.0,
+                    1051.0
+                ],
+                [
+                    1199.0,
+                    983.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "xian",
+            "trail": [
+                [
+                    1199.0,
+                    983.0
+                ],
+                [
+                    1138.0,
+                    1051.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lanzhou",
+            "source_id": "chengdu",
+            "trail": [
+                [
+                    1077.0,
+                    1024.0
+                ],
+                [
+                    1083.0,
+                    932.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chengdu",
+            "source_id": "lanzhou",
+            "trail": [
+                [
+                    1083.0,
+                    932.0
+                ],
+                [
+                    1077.0,
+                    1024.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "nanning",
+            "source_id": "kunming",
+            "trail": [
+                [
+                    1063.0,
+                    1384.0
+                ],
+                [
+                    1195.0,
+                    1370.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "kunming",
+            "source_id": "nanning",
+            "trail": [
+                [
+                    1195.0,
+                    1370.0
+                ],
+                [
+                    1063.0,
+                    1384.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "guiyang",
+            "source_id": "kunming",
+            "trail": []
+        },
+        {
+            "destination_id": "kunming",
+            "source_id": "guiyang",
+            "trail": []
+        },
+        {
+            "destination_id": "guiyang",
+            "source_id": "nanning",
+            "trail": []
+        },
+        {
+            "destination_id": "nanning",
+            "source_id": "guiyang",
+            "trail": []
+        },
+        {
+            "destination_id": "changsha",
+            "source_id": "nanning",
+            "trail": [
+                [
+                    1309.0,
+                    1285.0
+                ],
+                [
+                    1321.0,
+                    1201.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "nanning",
+            "source_id": "changsha",
+            "trail": [
+                [
+                    1321.0,
+                    1201.0
+                ],
+                [
+                    1309.0,
+                    1285.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "nanning",
+            "trail": [
+                [
+                    1320.0,
+                    1392.0
+                ],
+                [
+                    1366.0,
+                    1413.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "nanning",
+            "source_id": "guangzhou",
+            "trail": [
+                [
+                    1366.0,
+                    1413.0
+                ],
+                [
+                    1320.0,
+                    1392.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chongqing",
+            "source_id": "guiyang",
+            "trail": [
+                [
+                    1192.0,
+                    1171.0
+                ],
+                [
+                    1192.0,
+                    1119.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "guiyang",
+            "source_id": "chongqing",
+            "trail": [
+                [
+                    1192.0,
+                    1119.0
+                ],
+                [
+                    1192.0,
+                    1171.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "changsha",
+            "source_id": "guiyang",
+            "trail": [
+                [
+                    1224.0,
+                    1201.0
+                ],
+                [
+                    1319.0,
+                    1197.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "guiyang",
+            "source_id": "changsha",
+            "trail": [
+                [
+                    1319.0,
+                    1197.0
+                ],
+                [
+                    1224.0,
+                    1201.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "changsha",
+            "source_id": "chongqing",
+            "trail": [
+                [
+                    1189.0,
+                    1119.0
+                ],
+                [
+                    1236.0,
+                    1158.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chongqing",
+            "source_id": "changsha",
+            "trail": [
+                [
+                    1236.0,
+                    1158.0
+                ],
+                [
+                    1189.0,
+                    1119.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "wuhan",
+            "source_id": "chongqing",
+            "trail": [
+                [
+                    1185.0,
+                    1117.0
+                ],
+                [
+                    1190.0,
+                    1087.0
+                ],
+                [
+                    1231.0,
+                    1054.0
+                ],
+                [
+                    1349.0,
+                    1049.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chongqing",
+            "source_id": "wuhan",
+            "trail": [
+                [
+                    1349.0,
+                    1049.0
+                ],
+                [
+                    1231.0,
+                    1054.0
+                ],
+                [
+                    1190.0,
+                    1087.0
+                ],
+                [
+                    1185.0,
+                    1117.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "chongqing",
+            "trail": [
+                [
+                    1185.0,
+                    1117.0
+                ],
+                [
+                    1190.0,
+                    1087.0
+                ],
+                [
+                    1231.0,
+                    1054.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "chongqing",
+            "source_id": "xian",
+            "trail": [
+                [
+                    1231.0,
+                    1054.0
+                ],
+                [
+                    1190.0,
+                    1087.0
+                ],
+                [
+                    1185.0,
+                    1117.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "lanzhou",
+            "trail": [
+                [
+                    1018.0,
+                    811.0
+                ],
+                [
+                    987.0,
+                    766.0
+                ],
+                [
+                    1093.0,
+                    671.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lanzhou",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1093.0,
+                    671.0
+                ],
+                [
+                    987.0,
+                    766.0
+                ],
+                [
+                    1018.0,
+                    811.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "yinchuan",
+            "source_id": "lanzhou",
+            "trail": [
+                [
+                    1112.0,
+                    810.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lanzhou",
+            "source_id": "yinchuan",
+            "trail": [
+                [
+                    1112.0,
+                    810.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "lanzhou",
+            "trail": [
+                [
+                    1102.0,
+                    939.0
+                ],
+                [
+                    1181.0,
+                    951.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "lanzhou",
+            "source_id": "xian",
+            "trail": [
+                [
+                    1181.0,
+                    951.0
+                ],
+                [
+                    1102.0,
+                    939.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "yinchuan",
+            "trail": [
+                [
+                    1123.0,
+                    787.0
+                ],
+                [
+                    1234.0,
+                    821.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "yinchuan",
+            "source_id": "xian",
+            "trail": [
+                [
+                    1234.0,
+                    821.0
+                ],
+                [
+                    1123.0,
+                    787.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "yinchuan",
+            "trail": [
+                [
+                    1145.0,
+                    681.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "yinchuan",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1145.0,
+                    681.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1202.0,
+                    709.0
+                ],
+                [
+                    1239.0,
+                    780.0
+                ],
+                [
+                    1242.0,
+                    863.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "xian",
+            "trail": [
+                [
+                    1242.0,
+                    863.0
+                ],
+                [
+                    1239.0,
+                    780.0
+                ],
+                [
+                    1202.0,
+                    709.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "taiyuan",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1334.0,
+                    710.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "taiyuan",
+            "trail": [
+                [
+                    1334.0,
+                    710.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1338.0,
+                    589.0
+                ],
+                [
+                    1403.0,
+                    628.0
+                ],
+                [
+                    1395.0,
+                    671.0
+                ],
+                [
+                    1413.0,
+                    715.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "shijiazhuang",
+            "trail": [
+                [
+                    1413.0,
+                    715.0
+                ],
+                [
+                    1395.0,
+                    671.0
+                ],
+                [
+                    1403.0,
+                    628.0
+                ],
+                [
+                    1338.0,
+                    589.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "shenyang",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1360.0,
+                    544.0
+                ],
+                [
+                    1517.0,
+                    508.0
+                ],
+                [
+                    1603.0,
+                    507.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "shenyang",
+            "trail": [
+                [
+                    1603.0,
+                    507.0
+                ],
+                [
+                    1517.0,
+                    508.0
+                ],
+                [
+                    1360.0,
+                    544.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "changchun",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1360.0,
+                    544.0
+                ],
+                [
+                    1517.0,
+                    508.0
+                ],
+                [
+                    1616.0,
+                    487.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "changchun",
+            "trail": [
+                [
+                    1616.0,
+                    487.0
+                ],
+                [
+                    1517.0,
+                    508.0
+                ],
+                [
+                    1360.0,
+                    544.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "harbin",
+            "source_id": "hohhot",
+            "trail": [
+                [
+                    1360.0,
+                    544.0
+                ],
+                [
+                    1532.0,
+                    416.0
+                ],
+                [
+                    1546.0,
+                    349.0
+                ],
+                [
+                    1661.0,
+                    308.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "hohhot",
+            "source_id": "harbin",
+            "trail": [
+                [
+                    1661.0,
+                    308.0
+                ],
+                [
+                    1546.0,
+                    349.0
+                ],
+                [
+                    1532.0,
+                    416.0
+                ],
+                [
+                    1360.0,
+                    544.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "changchun",
+            "source_id": "harbin",
+            "trail": [
+                [
+                    1722.0,
+                    414.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "harbin",
+            "source_id": "changchun",
+            "trail": [
+                [
+                    1722.0,
+                    414.0
+                ]
+            ]
+        },
+        {
+            "destination_id": "shenyang",
+            "source_id": "changchun",
+            "trail": []
+        },
+        {
+            "destination_id": "changchun",
+            "source_id": "shenyang",
+            "trail": []
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "shenyang",
+            "trail": []
+        },
+        {
+            "destination_id": "shenyang",
+            "source_id": "shijiazhuang",
+            "trail": []
+        },
+        {
+            "destination_id": "beijing",
+            "source_id": "shijiazhuang",
+            "trail": []
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "beijing",
+            "trail": []
+        },
+        {
+            "destination_id": "tianjin",
+            "source_id": "shijiazhuang",
+            "trail": []
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "tianjin",
+            "trail": []
+        },
+        {
+            "destination_id": "taiyuan",
+            "source_id": "shijiazhuang",
+            "trail": []
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "taiyuan",
+            "trail": []
+        },
+        {
+            "destination_id": "jinan",
+            "source_id": "shijiazhuang",
+            "trail": []
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "jinan",
+            "trail": []
+        },
+        {
+            "destination_id": "zhengzhou",
+            "source_id": "shijiazhuang",
+            "trail": []
+        },
+        {
+            "destination_id": "shijiazhuang",
+            "source_id": "zhengzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "tianjin",
+            "source_id": "beijing",
+            "trail": []
+        },
+        {
+            "destination_id": "beijing",
+            "source_id": "tianjin",
+            "trail": []
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "taiyuan",
+            "trail": []
+        },
+        {
+            "destination_id": "taiyuan",
+            "source_id": "xian",
+            "trail": []
+        },
+        {
+            "destination_id": "zhengzhou",
+            "source_id": "taiyuan",
+            "trail": []
+        },
+        {
+            "destination_id": "taiyuan",
+            "source_id": "zhengzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "zhengzhou",
+            "source_id": "xian",
+            "trail": []
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "zhengzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "wuhan",
+            "source_id": "xian",
+            "trail": []
+        },
+        {
+            "destination_id": "xian",
+            "source_id": "wuhan",
+            "trail": []
+        },
+        {
+            "destination_id": "zhengzhou",
+            "source_id": "jinan",
+            "trail": []
+        },
+        {
+            "destination_id": "jinan",
+            "source_id": "zhengzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "hefei",
+            "source_id": "jinan",
+            "trail": []
+        },
+        {
+            "destination_id": "jinan",
+            "source_id": "hefei",
+            "trail": []
+        },
+        {
+            "destination_id": "nanjing",
+            "source_id": "jinan",
+            "trail": []
+        },
+        {
+            "destination_id": "jinan",
+            "source_id": "nanjing",
+            "trail": []
+        },
+        {
+            "destination_id": "wuhan",
+            "source_id": "zhengzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "zhengzhou",
+            "source_id": "wuhan",
+            "trail": []
+        },
+        {
+            "destination_id": "hefei",
+            "source_id": "zhengzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "zhengzhou",
+            "source_id": "hefei",
+            "trail": []
+        },
+        {
+            "destination_id": "changsha",
+            "source_id": "wuhan",
+            "trail": []
+        },
+        {
+            "destination_id": "wuhan",
+            "source_id": "changsha",
+            "trail": []
+        },
+        {
+            "destination_id": "nanchang",
+            "source_id": "wuhan",
+            "trail": []
+        },
+        {
+            "destination_id": "wuhan",
+            "source_id": "nanchang",
+            "trail": []
+        },
+        {
+            "destination_id": "hefei",
+            "source_id": "wuhan",
+            "trail": []
+        },
+        {
+            "destination_id": "wuhan",
+            "source_id": "hefei",
+            "trail": []
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "changsha",
+            "trail": []
+        },
+        {
+            "destination_id": "changsha",
+            "source_id": "guangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "nanchang",
+            "source_id": "changsha",
+            "trail": []
+        },
+        {
+            "destination_id": "changsha",
+            "source_id": "nanchang",
+            "trail": []
+        },
+        {
+            "destination_id": "haikou",
+            "source_id": "guangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "haikou",
+            "trail": []
+        },
+        {
+            "destination_id": "fuzhou",
+            "source_id": "guangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "fuzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "nanchang",
+            "source_id": "guangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "nanchang",
+            "trail": []
+        },
+        {
+            "destination_id": "hongkong",
+            "source_id": "guangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "hongkong",
+            "trail": []
+        },
+        {
+            "destination_id": "macau",
+            "source_id": "guangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "guangzhou",
+            "source_id": "macau",
+            "trail": []
+        },
+        {
+            "destination_id": "nanchang",
+            "source_id": "fuzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "fuzhou",
+            "source_id": "nanchang",
+            "trail": []
+        },
+        {
+            "destination_id": "hangzhou",
+            "source_id": "fuzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "fuzhou",
+            "source_id": "hangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "hefei",
+            "source_id": "nanchang",
+            "trail": []
+        },
+        {
+            "destination_id": "nanchang",
+            "source_id": "hefei",
+            "trail": []
+        },
+        {
+            "destination_id": "hangzhou",
+            "source_id": "nanchang",
+            "trail": []
+        },
+        {
+            "destination_id": "nanchang",
+            "source_id": "hangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "nanjing",
+            "source_id": "hefei",
+            "trail": []
+        },
+        {
+            "destination_id": "hefei",
+            "source_id": "nanjing",
+            "trail": []
+        },
+        {
+            "destination_id": "hangzhou",
+            "source_id": "hefei",
+            "trail": []
+        },
+        {
+            "destination_id": "hefei",
+            "source_id": "hangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "nanjing",
+            "source_id": "hangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "hangzhou",
+            "source_id": "nanjing",
+            "trail": []
+        },
+        {
+            "destination_id": "shanghai",
+            "source_id": "hangzhou",
+            "trail": []
+        },
+        {
+            "destination_id": "hangzhou",
+            "source_id": "shanghai",
+            "trail": []
+        },
+        {
+            "destination_id": "shanghai",
+            "source_id": "nanjing",
+            "trail": []
+        },
+        {
+            "destination_id": "nanjing",
+            "source_id": "shanghai",
+            "trail": []
+        }
+    ],
+    "provinces": [
+        {
+            "coord_x": 523.0,
+            "coord_y": 497.0,
+            "poi_id": "urumqi"
+        },
+        {
+            "coord_x": 574.0,
+            "coord_y": 1105.0,
+            "poi_id": "lhasa"
+        },
+        {
+            "coord_x": 966.0,
+            "coord_y": 836.0,
+            "poi_id": "xining"
+        },
+        {
+            "coord_x": 1036.0,
+            "coord_y": 860.0,
+            "poi_id": "lanzhou"
+        },
+        {
+            "coord_x": 1117.0,
+            "coord_y": 755.0,
+            "poi_id": "yinchuan"
+        },
+        {
+            "coord_x": 1050.0,
+            "coord_y": 1085.0,
+            "poi_id": "chengdu"
+        },
+        {
+            "coord_x": 1002.0,
+            "coord_y": 1322.0,
+            "poi_id": "kunming"
+        },
+        {
+            "coord_x": 1154.0,
+            "coord_y": 1254.0,
+            "poi_id": "guiyang"
+        },
+        {
+            "coord_x": 1143.0,
+            "coord_y": 1128.0,
+            "poi_id": "chongqing"
+        },
+        {
+            "coord_x": 1386.0,
+            "coord_y": 1170.0,
+            "poi_id": "changsha"
+        },
+        {
+            "coord_x": 1225.0,
+            "coord_y": 1409.0,
+            "poi_id": "nanning"
+        },
+        {
+            "coord_x": 1419.0,
+            "coord_y": 1382.0,
+            "poi_id": "guangzhou"
+        },
+        {
+            "coord_x": 1423.0,
+            "coord_y": 1066.0,
+            "poi_id": "wuhan"
+        },
+        {
+            "coord_x": 1492.0,
+            "coord_y": 1138.0,
+            "poi_id": "nanchang"
+        },
+        {
+            "coord_x": 1637.0,
+            "coord_y": 1229.0,
+            "poi_id": "fuzhou"
+        },
+        {
+            "coord_x": 1639.0,
+            "coord_y": 1051.0,
+            "poi_id": "hangzhou"
+        },
+        {
+            "coord_x": 1525.0,
+            "coord_y": 1000.0,
+            "poi_id": "hefei"
+        },
+        {
+            "coord_x": 1577.0,
+            "coord_y": 983.0,
+            "poi_id": "nanjing"
+        },
+        {
+            "coord_x": 1679.0,
+            "coord_y": 1001.0,
+            "poi_id": "shanghai"
+        },
+        {
+            "coord_x": 1382.0,
+            "coord_y": 894.0,
+            "poi_id": "zhengzhou"
+        },
+        {
+            "coord_x": 1484.0,
+            "coord_y": 801.0,
+            "poi_id": "jinan"
+        },
+        {
+            "coord_x": 1218.0,
+            "coord_y": 928.0,
+            "poi_id": "xian"
+        },
+        {
+            "coord_x": 1329.0,
+            "coord_y": 768.0,
+            "poi_id": "taiyuan"
+        },
+        {
+            "coord_x": 1393.0,
+            "coord_y": 753.0,
+            "poi_id": "shijiazhuang"
+        },
+        {
+            "coord_x": 1476.0,
+            "coord_y": 696.0,
+            "poi_id": "tianjin"
+        },
+        {
+            "coord_x": 1446.0,
+            "coord_y": 668.0,
+            "poi_id": "beijing"
+        },
+        {
+            "coord_x": 1287.0,
+            "coord_y": 645.0,
+            "poi_id": "hohhot"
+        },
+        {
+            "coord_x": 1658.0,
+            "coord_y": 551.0,
+            "poi_id": "shenyang"
+        },
+        {
+            "coord_x": 1700.0,
+            "coord_y": 450.0,
+            "poi_id": "changchun"
+        },
+        {
+            "coord_x": 1720.0,
+            "coord_y": 360.0,
+            "poi_id": "harbin"
+        },
+        {
+            "coord_x": 1314.0,
+            "coord_y": 1523.0,
+            "poi_id": "haikou"
+        },
+        {
+            "coord_x": 1437.0,
+            "coord_y": 1423.0,
+            "poi_id": "macau"
+        },
+        {
+            "coord_x": 1462.0,
+            "coord_y": 1413.0,
+            "poi_id": "hongkong"
+        }
+    ]
+}

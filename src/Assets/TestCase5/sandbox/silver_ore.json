@@ -1,0 +1,8 @@
+{
+	"id": 1,
+	"name": "Silver",
+	"type": 2,
+	"subtype": 3,
+	"rarity": 0,
+	"tileset_path": "../media/silver_ore.png"
+}

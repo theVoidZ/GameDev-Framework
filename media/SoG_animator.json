@@ -1,0 +1,738 @@
+{
+    "classname": "gdf::animation::Animator",
+    "current_state": "S0",
+    "enabled": true,
+    "instance_id": 67,
+    "layers": [
+        {
+            "instance_id": 68,
+            "name": "StateMachine",
+            "states": [
+                {
+                    "instance_id": 69,
+                    "name": "S0"
+                },
+                {
+                    "instance_id": 71,
+                    "name": "RS1"
+                },
+                {
+                    "instance_id": 73,
+                    "name": "RS2"
+                },
+                {
+                    "instance_id": 75,
+                    "name": "RS22"
+                },
+                {
+                    "instance_id": 77,
+                    "name": "RS3"
+                },
+                {
+                    "instance_id": 93,
+                    "name": "LS1"
+                },
+                {
+                    "instance_id": 95,
+                    "name": "LS2"
+                },
+                {
+                    "instance_id": 97,
+                    "name": "LS22"
+                },
+                {
+                    "instance_id": 99,
+                    "name": "LS3"
+                },
+                {
+                    "instance_id": 115,
+                    "name": "US1"
+                },
+                {
+                    "instance_id": 117,
+                    "name": "US2"
+                },
+                {
+                    "instance_id": 119,
+                    "name": "US22"
+                },
+                {
+                    "instance_id": 121,
+                    "name": "US3"
+                },
+                {
+                    "instance_id": 137,
+                    "name": "DS1"
+                },
+                {
+                    "instance_id": 139,
+                    "name": "DS2"
+                },
+                {
+                    "instance_id": 141,
+                    "name": "DS22"
+                },
+                {
+                    "instance_id": 143,
+                    "name": "DS3"
+                }
+            ],
+            "transitions": [
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 2.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 79,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "RS1",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 2.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 81,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "RS2",
+                        "source": "RS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 83,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "RS2"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 2.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 85,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "RS3",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 87,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "RS3",
+                        "source": "RS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 360,
+                    "has_exit_time": true,
+                    "instance_id": 89,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "RS3"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 4.0
+                        },
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 91,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "RS22",
+                        "source": "RS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 4.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 101,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "LS1",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 4.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 103,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "LS2",
+                        "source": "LS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 105,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "LS2"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 4.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 107,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "LS3",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 109,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "LS3",
+                        "source": "LS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 360,
+                    "has_exit_time": true,
+                    "instance_id": 111,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "LS3"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 2.0
+                        },
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 113,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "LS22",
+                        "source": "LS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 123,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "US1",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 125,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "US2",
+                        "source": "US1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 127,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "US2"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 1.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 129,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "US3",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 131,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "US3",
+                        "source": "US1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 360,
+                    "has_exit_time": true,
+                    "instance_id": 133,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "US3"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 3.0
+                        },
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 135,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "US22",
+                        "source": "US1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 3.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 145,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "DS1",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 3.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 147,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "DS2",
+                        "source": "DS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 149,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "DS2"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 3.0
+                        },
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 151,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "DS3",
+                        "source": "S0"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Attacking",
+                            "threshold": 1.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 153,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "DS3",
+                        "source": "DS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 360,
+                    "has_exit_time": true,
+                    "instance_id": 155,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "DS3"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": [
+                        {
+                            "condition": "Equals",
+                            "parameter": "Direction",
+                            "threshold": 1.0
+                        },
+                        {
+                            "condition": "Greater",
+                            "parameter": "HeroSpeed",
+                            "threshold": 0.0
+                        }
+                    ],
+                    "exit_time": 0,
+                    "has_exit_time": false,
+                    "instance_id": 157,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "DS22",
+                        "source": "DS1"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 159,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "LS22"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 161,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "RS22"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 163,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "DS22"
+                    }
+                },
+                {
+                    "can_transit_to_self": true,
+                    "conditions": null,
+                    "exit_time": 270,
+                    "has_exit_time": true,
+                    "instance_id": 165,
+                    "mute": false,
+                    "name": "",
+                    "solo": false,
+                    "states": {
+                        "destination": "S0",
+                        "source": "US22"
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "",
+    "parameters": {
+        "Attacking": 0.0,
+        "Direction": 1.0,
+        "HeroSpeed": 0.0
+    }
+}

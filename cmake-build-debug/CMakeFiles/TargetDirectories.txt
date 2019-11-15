@@ -1,0 +1,3 @@
+/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/CMakeFiles/Incursio_v20.dir
+/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/CMakeFiles/edit_cache.dir

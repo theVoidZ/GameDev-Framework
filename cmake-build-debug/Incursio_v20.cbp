@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Incursio_v20"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake_modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Incursio_v20">
+				<Option output="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Incursio_v20" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/animation"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/backupobject"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/planete"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/SoG"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase6"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/audio"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Core"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/data_structure"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/editor"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/managers"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/resource_management"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/system"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/time_management"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/imgui-sfml"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/imgui-sfml/imgui"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/SFC"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/SFC/nanosvg++"/>
+					<Add directory="/doc/libs/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 Incursio_v20"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Incursio_v20/fast">
+				<Option output="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Incursio_v20" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/animation"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/backupobject"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/planete"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/SoG"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase6"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/audio"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/Core"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/data_structure"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/editor"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/managers"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/resource_management"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/system"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/time_management"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/imgui-sfml"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/imgui-sfml/imgui"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/SFC"/>
+					<Add directory="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/SFC/nanosvg++"/>
+					<Add directory="/doc/libs/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 Incursio_v20/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/main.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/SoG/debuggeritem.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/SoG/debuggeritem.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/SoG/sog.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/SoG/sog.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/camfollower.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/camfollower.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalgameinfo.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalgameinfo.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalkernel.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalkernel.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalscenebuilder.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalscenebuilder.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalsceneloader.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/finalsceneloader.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/planete/Biome.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/planete/Biome.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox/OreBase.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox/OreBase.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox/TileSetBase.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox/TileSetBase.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox/cobblestone_block.json">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/sandbox/silver_ore.json">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/universecenter.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Assets/TestCase5/universecenter.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Core/collider.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Core/collider.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Core/collisionmanager.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Core/collisionmanager.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Core/garbagecollector.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/Core/garbagecollector.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animation.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animation.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animation2.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animation2.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animationclip.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animationclip.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animationevent.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animationevent.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animator.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animator.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animatorcontroller.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animatorcontroller.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animatorcontrollerlayer.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/animatorcontrollerlayer.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/blendtree.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/blendtree.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/keyframe.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/keyframe.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/motion.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/motion.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorcondition.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorcondition.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorconditionmode.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorstate.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorstate.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorstatemachine.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatorstatemachine.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatortransitionbase.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/state_machine/animatortransitionbase.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/animation/wrapmode.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/audio/audioclip.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/audio/audioclip.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/audio/audiolistener.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/audio/audiolistener.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/audio/audiosource.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/audio/audiosource.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/data_structure/bounds.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/data_structure/bounds.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/renderer.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/renderer.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/shaperenderer.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/shaperenderer.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/sprite2d.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/sprite2d.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/spriterenderer.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/spriterenderer.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/spritesheet.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/spritesheet.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/texture2d.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/graphic/texture2d.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/camera.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/camera.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/component.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/component.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/component.inl">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/componentcontainer.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/componentcontainer.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/componentcontainer.inl">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/componentfactory.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/componentfactory.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/hierarchy.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/hierarchy.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/kernelrules.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/kernelrules.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/tracker_ptr.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/data_structure/tracker_ptr.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/gameinfo.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/gameinfo.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/gameobject.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/gameobject.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/gameobject.inl">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/monobehavior.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/monobehavior.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/object.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/object.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/scene.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/scene.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/sceneloaderbase.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/sceneloaderbase.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/transform.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/kernel/transform.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/resource_management/resource.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/resource_management/resource.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/resource_management/resourcemanager.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/resource_management/resourcemanager.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/system/algorithm.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/system/algorithm.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/system/operators.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/system/operators.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/system/terminal_colors.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/time_management/chrono.cpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/time_management/chrono.h">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/src/tools/json.hpp">
+			<Option target="Incursio_v20"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/doc/projects/jetbrains-clion/Incursio_v20/cmake_modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

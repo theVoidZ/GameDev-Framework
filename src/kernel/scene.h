@@ -1,0 +1,361 @@
+#ifndef SCENE_H
+#define SCENE_H
+
+// c++-includes
+#include <iostream>
+#include <iomanip>
+#include <list>
+#include <memory>
+
+// boost-includes
+#include <boost/type_index.hpp>
+
+// sfml-includes
+#include <SFML/Graphics.hpp>
+#include <SFML/System/Time.hpp>
+
+// box2d-includes
+
+// qt-includes
+
+// user-includes
+#include "terminal_colors.h"
+#include "componentcontainer.h"
+
+class quad_tree;
+
+namespace gdf {
+
+namespace temporal {
+class Chrono;
+}
+
+namespace kernel {
+
+class Camera;
+class GameInfo;
+class Object;
+class GameObject;
+class Hierarchy;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief The Scene class is the base class for all scenes.
+///
+/// The scene class provides a way for creating and organizing several items in a tree strucutre.
+///
+/// This class serves as a container for \a GameObject, allowing theirs initialization, updating and rendering.
+///
+/// \note Scene inherits from \a ComponentContainer which provides it with a Component Container.
+///
+class Scene final :       public ComponentContainer
+{
+    public:
+        friend class gdf::kernel::GameInfo;
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Default constructor
+        ///
+        Scene();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Default destructor
+        ///
+        virtual ~Scene();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Instantiate a game object and add it automatically on the scene
+        ///
+        /// \bug Which scene is concerned ? how to specify it. Or may be do not automatically attach GO to root ?
+        /// Gives more flexibility.
+        ///
+        /// Game objects cannot be instantiated directly using theirs constructor.
+        ///
+        /// This method creates an instance of game object and add it to the scene hierarchy, if no parent is
+        /// specified, the game object is set as a child of \a Scene::root_
+        ///
+        /// \param vessel Add the game_object to vessel Pointer instead of a random pointer.
+        /// \return Instance of GameObject
+        ///
+        GameObject* instantiate(tracker_ptr<GameObject> vessel);
+        ///
+        /// \param go_name game object's name
+        /// \return Instance of GameObject
+        ///
+        GameObject* instantiate(std::string go_name);
+        ///
+        /// \param parent
+        /// \param go_name
+        /// \return Instance of GameObject
+        ///
+        GameObject* instantiate(Hierarchy *parent, std::string go_name);
+        ///
+        /// \param parent
+        /// \param pos
+        /// \param rotation
+        /// \param go_name
+        /// \return Instance of GameObject
+        ///
+        GameObject* instantiate(Hierarchy *parent, sf::Vector2f pos, float rotation, std::string go_name);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    protected:
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Initializes the scene.
+        ///
+        /// This method does:
+        /// \li Creates the root node (GameObject)
+        /// \li Initializes the components of the Scene
+        /// \li Loads all the resources needed by the scene's objects
+        /// \li Constructs and initializes the scene's objects.
+        ///
+        /// \note This method cannot be overridden.
+        ///
+        virtual void init() final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Invoked after all scenes are inited
+        ///
+        virtual void post_init() final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Handle events related to the scene and it objects.
+        ///
+        /// This method does:
+        /// \li Invoke \a Scene::on_event to handle scene's related events.
+        /// \li Performs events-related callbacks on all objects of the scene. See \a MonoBehavior
+        ///
+        /// \param event Event thrown and carried by the method
+        ///
+        virtual void handle_events(const sf::Event& event) final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Used when overriding from Scene to specify specific event handling proper the scene.
+        ///
+        /// \param event Event captured
+        ///
+        virtual void on_event(const sf::Event& event);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Performs an normal update of the elements of the scene with dt amount of time.
+        ///
+        ///
+        /// \note The scene's elements are updated recursively in depth-first, any object not connected to the
+        /// hierarchy is not updated. i.e not a child of \a Scene::root_
+        ///
+        /// \param dt The elapsed amount of time between two calls
+        ///
+        virtual void update(sf::Time dt) final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Performs an update regarding the physics of the elements of the scene with dt amount of time.
+        ///
+        /// \note The scene's elements are updated recursively in depth-first, any object not connected to the
+        /// hierarchy is not updated. i.e not a child of \a Scene::root_
+        ///
+        /// \param dt The elapsed amount of time between two calls
+        ///
+        virtual void fixed_update(sf::Time dt) final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Performs a normal update of the elements of the scene that comes nearly at end of loop with
+        /// dt amount of time.
+        ///
+        /// \note The scene's elements are updated recursively in depth-first, any object not connected to the
+        /// hierarchy is not updated. i.e not a child of \a Scene::root_
+        ///
+        /// \param dt The elapsed amount of time
+        ///
+        virtual void late_update(sf::Time dt) final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Performs a rendering of the elemens of the scene.
+        ///
+        /// The rendering process will render the content of all the cameras of the scene.
+        ///
+        /// \note The scene's elements are rendered recursively in depth-first, any item not connected to the
+        /// hierarchy is not rendered. i.e not a child of \a Scene::root_
+        ///
+        virtual void draw() final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Performs a rendering of the scene regarding the HUD.
+        ///
+        /// The gui-rendering process will render the hud parts of the scene. See \a Gui
+        ///
+        /// \note The scene's elements are rendered recursively in depth-first, any item not connected to the
+        /// hierarchy is not rendered. i.e not a child of \a Scene::root_
+        ///
+        virtual void draw_gui() final;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        // Setters
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// Set scene to active or not.
+        /// \param active Value
+        ///
+        void set_active(bool active);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        // Getters
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Retrieves the list of cameras of the scene.
+        /// \return List of camera
+        std::list< tracker_ptr<Camera> >& cameras();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        std::list< tracker_ptr<GameObject> > &game_objects();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        tracker_ptr<GameObject> root() const;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// Retrieve the tracker of a given object, generally from a list.
+        /// SUGG: Incoming. as retrieving item based on Pointer is not very practical. ( Should use Name/Id instead )
+        /// name based: Must assure names are unique within the hierarchy.
+        tracker_ptr<GameObject> get_game_object(GameObject* go);
+        tracker_ptr<GameObject> get_game_object(unsigned long instance_id);
+        tracker_ptr<GameObject> get_game_object(std::string instance_name);
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Retrieve the list of discarded objects, ready to be destroyed
+        /// \return List of objects.
+        ///
+        std::map< tracker_ptr<GameObject>, sf::Time>& go_junkyard();
+        std::map< tracker_ptr<Component>, sf::Time>& c_junkyard();
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        tracker_ptr<gdf::temporal::Chrono> chrono();
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        bool is_active() const;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Retrieve the loading status of the status.
+        /// \return True if the scene is loaded, false otherwise
+        ///
+        bool is_loaded() const;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        std::string name() const;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief See. Scene::junkyard_, but used for orphan objects.
+        /// WARNING: Why is it declared in Scene and not in GameInfo.
+        /// NOTE: Object type must be changed to smaretptr
+        ///
+        static std::map< tracker_ptr<GameObject>, sf::Time > global_go_junkyard_;
+        static std::map< tracker_ptr<Component>, sf::Time > global_c_junkyard_;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        // TRACKED OBJECTS ( REFERENCES TO EXISTANT ONE )
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief List of all camera of the scene
+        ///
+        /// Using \a ComponentContainer::addComponent and \a ComponentContainer::destroy will alter the
+        /// content of this container.
+        ///
+        /// \note Cameras are used in Scene::render to draw the object, keeping a reference of all created cameras is
+        /// crucial for performance.
+        ///
+        std::list< tracker_ptr<Camera> > cameras_;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Represents the top-most object of the scene's hierarchy
+        ///
+        /// Every GameObject that belongs to the scene is created as a direct or indirect child of the root.
+        ///
+        /// \note The root object cannot be destroyed. [Not implemented yet]
+        ///
+        tracker_ptr<GameObject> root_;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    protected:
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief List of all game objects of the scene.
+        ///
+        /// \attention Game objects that are not connected to the root's scene are not listed in this container.
+        ///
+        std::list< tracker_ptr<GameObject> > game_objects_;
+//        std::map< unsigned long, tracker_ptr<GameObject> > game_objects_;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        tracker_ptr< gdf::temporal::Chrono> chrono_;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief A container to hold all objects marked for destruction [NOT USED]
+        ///
+        /// A Garbage Collector will bind to this container to process and destroy the objects
+        ///
+        /// \attention Requires a base class, such as Object.
+        /// \note Only objects of type \a Object are destroyable.
+        ///
+        /// \attention This will be used with GC later
+        /// NOTE: Object type must be changed to smaretptr
+        ///
+        std::map< tracker_ptr<GameObject>, sf::Time > go_junkyard_;
+        std::map< tracker_ptr<Component>, sf::Time > c_junkyard_;
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Accounts the number of viewport rendering a camera that belongs to the scene.
+        ///
+        unsigned char ref_count_ = 0;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// Tell whether the scene is active or not,
+        /// An active scene does perform update, rendering and time advances as well, non-active does not.
+        ///
+        bool is_active_ = true;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// \brief Property to tell if the scene is loaded or not.
+        ///
+        bool is_loaded_ = false;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        std::string name_= "";
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public:
+        std::vector< quad_tree* > quad_heads;
+
+};
+
+}}
+
+#endif // SCENE_H

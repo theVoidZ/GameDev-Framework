@@ -1,0 +1,20 @@
+/snap/clion/73/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /doc/projects/jetbrains-clion/Incursio_v20
+-- Found SFML .. in /doc/libs/SFML-2.5.1/include
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   system
+--   filesystem
+-- Configuring done
+CMake Warning at CMakeLists.txt:34 (add_executable):
+  Cannot generate a safe runtime search path for target Incursio_v20 because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libsfml-network.so.2.5] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /doc/libs/SFML-2.5.1/lib
+
+  Some of these libraries may not be found correctly.
+
+
+-- Generating done
+-- Build files have been written to: /doc/projects/jetbrains-clion/Incursio_v20/cmake-build-debug
